@@ -1,0 +1,23 @@
+/* .rn_RelatedAnswers li:before {
+  font-family: 'FontAwesome';
+  margin-right: 6px;
+  content: "\f0eb";
+  margin-left: 1px;
+  margin-right: 5px;
+  font-size: 1.4em; } 
+.rn_RelatedAnswers h2 {
+  font-size: 1.1em; }*/
+
+@media print {
+  .rn_RelatedAnswers {
+    display: none; } }
+
+
+.rn_RelatedAnswers h2 {
+    border-bottom: 1px solid #BBB;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #4e4e4e;
+    font-family: "DepotNew-Bd";
+    font-size: 25px;
+}

@@ -1,0 +1,15 @@
+.rn_SearchButton2 {
+    display:inline;
+    bottom: 0px;
+	
+}
+.rn_SearchButton2 input {
+    border:none;
+    vertical-align:top;
+}
+.rn_SearchButton2 .rn_SubmitButton {
+    background-image:url(/euf/assets/themes/images/searchbtn.jpg)#C50303!important;
+    color:#FFF;
+    cursor:pointer;
+    font-weight:bold;
+}

@@ -1,0 +1,10 @@
+#rn_ProfilePicture {
+	@include span-columns(12);
+
+	.rn_FormSubmit {
+		@include span-columns(2);
+	}
+	.cancelButton {
+		@include span-columns(2);
+	}
+}

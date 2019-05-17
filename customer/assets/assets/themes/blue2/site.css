@@ -1,0 +1,1417 @@
+
+/*********************************
+Global Style
+
+Index:
+    01. Reset
+    02. Font multiplier table
+    03. Global Settings for Common
+         HTML elements
+    04. Template Structure
+    05. Text Colors
+    06. Navigation Bar
+    07. Shared/General Components
+    08. Answer & Question Detail Pages
+    09. Home Page
+    10. Account Pages
+    11. General Accessiblity
+    12. Print Style
+    13. Chat Related
+**********************************/
+
+/********************
+    01. Reset
+********************/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}
+ul, ol, li, dl, dt, dd{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+/* to preserve line-height and selector appearance */
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;margin:0;padding:0;}
+/*because legend doesn't inherit in IE */
+legend{color:#000; padding:0;}
+a img, iframe { border: none; }
+
+/*************************************
+    02. Font multiplier table
+**************************************
+Pixels  EMs   Percent    Points
+6px   0.500     50.00%     5pt
+7px     0.583     58.30%     5pt
+8px     0.667     66.70%     6pt
+9px     0.750     75.00%     7pt
+10px     0.833     83.30%     8pt
+11px     0.917     91.70%     8pt
+(12px is our body default)
+12px     1.000     100.0%     9pt
+13px     1.083     108.3%     10pt
+14px     1.167     116.7%     11pt
+15px     1.250     125.0%     11pt
+16px     1.333     133.3%     12pt
+17px     1.417     141.7%     13pt
+18px     1.500     150.0%     14pt
+19px     1.583     158.3%     14pt
+20px     1.667     166.7%     15pt
+21px     1.750     175.0%     16pt
+22px     1.833     183.3%     17pt
+23px     1.917     191.7%     17pt
+24px     2.000     200.0%     18pt
+***************************************/
+/* Temporary */
+
+#hide
+{
+	visibility:hidden;
+
+}
+
+/**************************************
+
+	Blue CSS
+	
+**************************************/
+/****** Navigtion Bar ******/
+#topnav
+	{
+		height:80px;
+		background:#336699;
+		width:100%;
+		-webkit-box-shadow: 0px 9px 8px 0px #000; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        box-shadow: 0px 9px 8px 0px #000; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+		z-index:2;
+	}
+
+#logo
+	{
+		height:60px;
+		width:481px;
+		padding:10px;
+		float:left;
+		margin-left:30px;
+		margin-right:20px;
+	}
+
+#topicons
+	{
+		height:60px;
+		width:470px;
+		float:right;
+		margin-right:10px;
+		position:absolute;
+		top:0px;
+		right:0px;
+	}
+	
+#topicons ul
+	{
+		display:inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
+#topicons ul li 
+	{
+		display:inline-block;
+		zoom: 1;
+		*display: inline;
+		padding:8px 12px 4px 12px;
+		alignment-adjust:middle;
+		text-align:center;
+	}
+	
+#topicons ul li a
+{
+		color:#FFF;
+		font-size:13px;
+		font-weight:bold;
+}
+	
+.rn_SiteFeedback2
+{
+		height:47px !important;
+		width:60px !important;
+		background:url(images/icons/Keyboard.png) no-repeat top !important;
+		background-size:60px !important;
+		position:absolute !important;
+		top:6px !important;
+}
+			
+.rn_SiteFeedback2 a
+{
+		color:#FFF;
+		font-weight:bold;
+		font-size:13px;
+		position:relative;
+		top:49px;
+}
+
+
+
+/****** Product Slider ******/
+
+#slider
+{
+	width:600px;
+	margin:100px auto 0 auto;
+	height:210px;
+
+}
+
+      .ui-jcoverflip {
+        position: relative;
+      }
+      
+      .ui-jcoverflip--item {
+        position: absolute;
+        display: block;
+      }
+      
+      #flip {
+        height: 210px;
+        width: 630px;
+        margin-bottom: 50px;
+      }
+      
+      #flip .ui-jcoverflip--title {
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        text-align: center;
+        color: #FFF;
+		font-weight:bold;
+		font-size:14px;
+      }
+      
+      #flip img {
+        display: block;
+        border: 0;
+        outline: none;
+		width:111px !important;
+		padding: 0 !important;
+		margin:0 !important;
+		float:none;
+		
+      }
+      
+      #flip a {
+        outline: none;
+      }
+      
+      ul,
+      ul li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        list-style-type: none;
+      }
+	  
+/****** Content Box ******/
+
+#ribbonbox
+{
+	width:830px;
+	height:auto;
+	margin: 100px auto 100px auto;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(219,219,219,1) 99%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(99%,rgba(219,219,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 99%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 99%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+/* ribbon style */
+
+ .ribbon-wrapper {
+	position: relative;
+}
+  .ribbon-front {
+	background-color: #222;	
+	height: 40px;
+	width: 870px;
+	position: relative;
+	left:-20px;
+	z-index: 2;
+}
+
+  .ribbon-front,
+  .ribbon-back-left,
+  .ribbon-back-right
+{
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-topright,
+  .ribbon-edge-bottomleft,
+  .ribbon-edge-bottomright {
+	position: absolute;
+	z-index: 1;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-topright {
+}
+
+  .ribbon-edge-bottomleft,
+  .ribbon-edge-bottomright {
+	top: 40px;
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-bottomleft {
+	left: -20px;
+	border-color: transparent #000 transparent transparent;
+}
+
+  .ribbon-edge-topleft {
+	top: 0px;
+	border-width: 0px 20px 0 0;
+}
+  .ribbon-edge-bottomleft {
+	border-width: 0 20px 10px 0;
+}
+
+  .ribbon-edge-topright,
+  .ribbon-edge-bottomright {
+	left: 830px;
+	border-color: transparent transparent transparent #000;
+}
+
+  .ribbon-edge-topright {
+	top: 0px;
+	border-width: 0px 0 0 20px;
+}
+  .ribbon-edge-bottomright {
+	border-width: 0 0 10px 20px;
+}
+
+  .ribbon-back-left {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	width: 0px;
+	height: 40px;
+		z-index: 0;
+}
+
+  .ribbon-back-right {
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	width: 0px;
+	height: 40px;
+		z-index: 0;
+}
+
+/****** Ribbon Content ********/
+
+
+/****** Social ******/
+#socialbox
+{
+	width:50px;
+	height:200px;
+	padding:9px 12px 9px 0;
+	background:#101010;
+	position:fixed;
+	left:0px;
+	top:320px;
+	-moz-border-top-right-radius: 12px;
+	-webkit-border-top-right-radius: 12px;
+	border-top-right-radius: 12px;
+	-moz-border-bottom-right-radius: 12px;
+	-webkit-border-bottom-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+
+#socialicons ul li
+{
+	background:#336699;
+	margin:12px 0;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+/****** Footer ******/
+	
+#footer
+	{
+		width:100%;
+		height:160px;
+		background:#336699;
+		vertical-align:bottom;
+	}
+
+#footerlinks
+	{
+		height: 140px;
+		width:800px;
+		margin:0 auto 0 auto;
+		padding:10px;
+	}
+	
+#footerlinks ul
+	{
+		display:inline-block;
+		zoom: 1;
+		*display: inline;
+		padding: 20px 30px 0 30px;
+		vertical-align:top;
+	}
+	
+#footerlinks ul li
+	{
+		display:block;
+		color:#FFF;
+		font-size:13px;
+		font-weight:normal;
+	}
+
+#footerlinks ul li h2
+	{
+		font-size:12px;
+		font-weight:bold !important;
+		color:#FFF;
+	}
+
+#footerbar
+	{
+		width:100%;
+		height:25px;
+		background:#003366;
+		vertical-align:baseline;
+	}
+
+/*************************************
+    03. Global Settings for Common
+          HTML elements
+*************************************/
+html {
+	background: #595959;
+	color:#FFF !Important;
+}
+/*Japanese charset support*/
+html[lang="ja-JP"],
+html[lang="ja-JP"] input, html[lang="ja-JP"] textarea, html[lang="ja-JP"] select {
+    font-family:"Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", "MS PGothic", "MS Pゴシック", Helvetica, Arial, sans-serif;
+}
+body {
+    font-size:.75em;
+    line-height:1.250em;
+    text-align:left;
+	color:#FFF !Important;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+	color:#FFF !Important;
+}
+h1 { /* 25px */
+    font-size:2.083em;
+    font-weight:normal;
+    line-height:1.8em;
+}
+h2 { /* 16px */
+    font-size:1.333em;
+    line-height:1.4em;
+}
+h3 { /* 14px */
+    color:#FFF !Important;
+    font-size:1.167em;
+    line-height:1.3em;
+}
+h4 { /* 12px */
+    color:#FFF !Important;
+    font-size:1em;
+    line-height:1.3em;
+}
+h5 { /* 11px */
+    color:#FFF !Important;
+    font-size:0.917em;
+    line-height:1.0em;
+}
+h6 { /* 10px */
+    color:#FFF;
+    font-size:0.833em;
+    line-height:.8em;
+}
+p {
+    line-height:1.4em;
+    margin-bottom:1em;
+	color:#FFF !Important;
+}
+table {
+    border-collapse:separate;
+    border-spacing:0.3em;
+}
+hr {
+    margin:10px 0px;
+}
+strong {
+    font-weight: bolder;
+}
+caption {
+    color:#404040;
+    font-size:1em;
+    font-weight:bold;
+    line-height:1.3em;
+}
+blockquote {
+    margin:10px 30px;
+}
+a:visited {
+    color:#FFF;
+}
+
+a:link
+{
+	color:#FFF;
+}
+input[type="text"], input[type="password"]  {
+    height:18px;
+}
+input, textarea, select {
+    border:solid 1px #B1B1B1;
+    /*font-family bears repeating for IE6/7*/
+    font-family:Helvetica, Arial, sans-serif;
+    padding:2px;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border-color:#AAA;
+    background-color:#F8F8F8;
+}
+input[type="submit"],
+button {
+    /*  button gradient 1x60 sprite image */
+    background:#0E53A7 url(../branding/images/buttonGradientCombo.png) 0px 0px repeat-x;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    border:1px solid #304764;
+    color:#FFF;
+    cursor:pointer;
+    font:bold 12px Helvetica,Arial,sans-serif;
+    line-height:normal;
+    margin-right:6px;
+    padding:6px 8px;
+    text-decoration:none;
+    text-shadow:2px 2px 2px rgba(0,0,0,0.25);
+    /*Fix for IE6/7 button width bug*/
+    *width:auto;
+    *overflow:visible;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+button:hover,
+button:focus {
+    background-position: 0px -40px;
+    border-color:#46494D;
+    cursor:pointer;
+}
+input[type="submit"][disabled],
+button[disabled] {
+    background-color:#304764;
+    background-position: 0px -40px;
+    border-color:#333;
+    color:#DDD;
+}
+input[type="submit"]:focus,
+button:focus {
+    /*IE8 doesn't apply focus outline natively*/
+    outline /*\**/:#000 dotted 1px\9
+}
+
+/********************************
+    04. Template Structure:
+    rn_Container
+        rn_Header
+        rn_Navigation
+        rn_Body
+            rn_MainColumn
+            rn_SideBar
+        rn_Footer
+            rn_RightNowCredit
+********************************/
+
+
+/***** RightNow CSS *****/
+
+#rn_Container {
+    height:100%;
+    margin:0px auto;
+    overflow:visible;
+    text-align:left;
+    width:735px;  /* Width of the Rightnow container */
+	background:none;
+	color:#FFF !Important;
+}
+#rn_Header {
+    color:#FFF;
+    height:72px;
+    min-height:72px;
+    overflow:visible;
+    padding:0 10px;
+}
+    #rn_Header a {
+        color:#FFF;
+    }
+    #rn_Logo {
+        cursor:pointer;
+        float:left;
+        font-family:"Lucida Sans Unicode","Lucida Grande",Garuda,sans-serif;
+        height:70px;
+        letter-spacing:-0.8px;
+        margin-top:4px;
+        position:relative;
+        width:32%;
+    }
+    #rn_Logo a {
+        bottom:0;
+        color:#FFF;
+        cursor:pointer;
+        font-size:2.083em;
+        font-weight:normal;
+        left:0;
+        line-height:1em;
+        text-decoration:none;
+    }
+    #rn_Logo a span.rn_LogoTitle {
+        cursor:pointer;
+        top:20px;
+        position:relative;
+    }
+    #rn_Logo a span.rn_LogoTitleMinor {
+        color:#DEDEDE;
+    }
+    #rn_Logo a img {
+        display:block;
+    }
+	
+	#rn_Footer, #rn_Body {
+    overflow:hidden;
+    padding:0 0px 20px 10px;
+    text-align:left;
+    width:99%;
+	color: #FFF !Important;
+}
+    #rn_MainColumn {
+        float:left;
+        margin-right:5px;
+        height:auto !important;
+        height:650px;
+        overflow:visible;
+        padding:0px 0px 10px 6px;
+        width:71%;
+		color:#FFF !Important;
+    }
+    #rn_SideBar {
+        float:right;
+        margin-right:1px;
+        width:24%; /* width for the sidebar */
+		vertical-align:top;
+		margin-top:24px;
+		
+    }
+#rn_Footer {
+    border-bottom:1px solid #E2E2E2;
+}
+    #rn_RightNowCredit {
+        border-top:1px solid #DDD;
+        clear:both;
+        padding:10px 0px 10px 0px;
+        text-align:right;
+        margin:auto 20px;
+    }
+
+/***** Blue Login Box******/
+	
+#Log {
+    background:#333333;
+    height:80px;
+    /*IE6*/
+    padding:12px 10px 0 10px;
+	top:20px;
+	width:130px;
+	float:right;
+	color:#FFF;
+	text-align:center;
+	font-weight:normal;
+	font-size:12px;
+	margin-right:12px !important;
+	margin-bottom:5px;
+	-webkit-border-radius: 12px; /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
+    border-radius: 12px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+	
+}
+
+#Log h2
+{
+	font-weight:bold;
+	font-size:15px;
+}
+
+    #rn_LoginStatus{
+        font-size:0.917em;
+        text-align:right;
+		color:#FFF;
+		text-align:center;
+		margin-top:7px;
+    }
+    #rn_LoginStatus a{
+        font-weight:bold;
+        text-decoration:none;
+		color:#FFF;
+		text-align:center;
+		margin-top:7px;
+    }
+
+/***** Blue Navigation in Ribbon *****/
+
+#rn_NavigationBar {
+    height:14px;
+	width:640px!important;
+	margin:0 auto 0 auto;
+    }
+	
+#rn_Navigation ul
+{
+	margin-left:5px;
+}
+
+#rn_NavigationBar ul li 
+{
+        float:left;
+}
+	
+.rn_NavigationTab2
+{
+	width:138px !important;
+	display:inline!important;
+	zoom: 1 !important;
+	*display: inline !important;
+	padding: 0 13px 0 13px !important;
+}
+
+.rn_NavigationTab2 a
+{
+	background:none !important;
+	color:#FFF !important;
+	padding:3px!important;
+	border:none!important;
+	margin: 6px 3px 0 3px!important;
+	font-size:14px !important;
+}
+
+.rn_NavigationTab2 a.rn_SelectedTab
+{
+	color:#336699 !important;
+	margin-right:5px !important;
+	padding-right:9px !important;
+}
+
+/*************************************
+    05. Text Colors
+*************************************/
+body,
+fieldset legend {
+    color:#FFF;
+}
+a:link {
+    color:#FFF !Important;
+	margin:0;
+	padding:0;
+	text-decoration:none;
+}
+
+/*************************************
+    06. Sidebar Content
+*************************************/
+#rn_SideBar .rn_Padding {
+    padding:16px 4px 2px 10px;
+    overflow:auto;
+}
+    /**Sprite for help resources**/
+    .rn_HelpResources {
+        margin:0 4px 10px 4px;
+    }
+    .rn_HelpResources .rn_Questions,
+    .rn_HelpResources .rn_Community,
+    .rn_HelpResources .rn_Contact,
+    .rn_HelpResources .rn_Chat,
+    .rn_HelpResources .rn_Feedback{
+        margin-top:10px;
+    }
+    .rn_HelpResources a{
+        background:url(../branding/images/layout/contactDiscs.png) no-repeat;
+        color:#464646;
+        display:block;
+        font-size:1.25em;
+        font-weight:bold;
+        margin:4px;
+        min-height:22px;
+        /*min-height for IE6/7*/
+        height:auto !important;
+        height:22px;
+        padding:10px 0 0 40px;
+        text-decoration:none;
+    }
+    .rn_HelpResources a:hover {
+       text-decoration:underline;
+    }
+    .rn_HelpResources span{
+        display:block;
+        margin:0 0 0 44px;
+    }
+    
+    /* image is 32 x 220 : icons are 32 x 32 */
+    .rn_HelpResources .rn_Questions a{
+        background-position: 0px -4px;
+    }
+    .rn_HelpResources .rn_Contact a{
+        background-position: 0px -48px;
+    }
+    .rn_HelpResources .rn_Chat a{
+        background-position: 0px -96px;
+    }
+    .rn_HelpResources .rn_Feedback a{
+        background-position: 0px -140px;
+    }
+    .rn_HelpResources .rn_Community a{
+        background-position: 0px -184px;
+    }
+
+/***********************************************************
+    07. Shared / General Styling
+***********************************************************/
+/*************
+Main search form at the top of many pages
+(answers/list, questions/list, questions/detail, home)
+*************/
+#rn_SearchControls {
+    clear:left;
+    float:left;
+    overflow:visible;
+    padding:8px 0 8px 12px;
+    position:relative;
+    width:97.4%;
+}
+#rn_SearchControls form {
+    padding:0 0 6px;
+    _margin-bottom:20px;
+}
+#rn_SearchControls form input[type="submit"],
+#rn_SearchControls form input[type="image"] {
+    margin:1.3em 0 0 1.3em;
+    padding:.4em 1em;
+}
+/**IE6 doesn't use attr selectors*/
+#rn_SearchControls input {
+    _margin:1.3em 0 0 1.3em;
+    _padding:.4em 1em;
+}
+    #rn_SearchControls .rn_SearchInput {
+        float:left;
+        position:relative;
+        width:50%;
+    }
+    #rn_SearchControls .rn_SearchInput a {
+        color:#25383C;
+        display:block;
+        float:right;
+        font-size:.917em;
+        margin-right:-8px;
+        /*IE6/7*/
+        *margin-right:0;
+        *position:absolute;
+        *right:-8px;
+        _right:0px;
+        text-decoration: none;
+    }
+    #rn_SearchControls .rn_SearchInput label {
+        bottom:0px;
+        position:absolute;
+        /*IE6/7*/
+        *bottom:-50px !important;
+        *position:relative !important;
+    }
+    #rn_SearchControls .rn_SearchInput input {
+        font-weight:bold;
+        height:1.3em;
+        margin-bottom:20px;
+        /*IE6*/
+        _margin: 0;
+        padding:4px 4px 3px;
+        width:100%;
+		background:#333;
+		color:#FFF;
+    }
+	
+	.rn_SimpleSearch form
+	{
+		width:166px !important;
+	}
+	.rn_SimpleSearch .rn_SearchImage
+	{
+		background:url(http://fy2013.rightnowdemo.com/euf/assets/images/icons/search.png) no-repeat;
+		right:1.4em !important;
+		text-indent:20px !important;
+	}
+	.rn_SimpleSearch .rn_SearchField
+	{
+		width:55% !important;
+		color:#FFF !important;
+		background:#333 !important;
+	}
+/************************
+PageTitle -
+Appears at the top of each page
+************************/
+#rn_PageTitle {
+    border-bottom:1px solid #E2E2E0;
+    color:#25383C;
+    overflow:hidden;
+    padding:16px 0 0;
+}
+#rn_PageTitle.rn_Home,
+#rn_PageTitle.rn_QuestionList,
+#rn_PageTitle.rn_AnswerList {
+    border-bottom:0;
+    overflow:visible;
+}
+#rn_PageTitle.rn_Home {
+    margin-bottom:10px;
+}
+#rn_PageTitle h1,
+#rn_PageTitle h2,
+#rn_PageTitle h3,
+#rn_PageTitle h4,
+#rn_PageTitle h5,
+#rn_PageTitle h6 {
+    clear:left;
+    word-wrap:break-word;
+}
+#rn_PageTitle p {
+    clear:both;
+}
+/************************
+PageContent
+************************/
+#rn_PageContent {
+    clear:both;
+    overflow:hidden;
+}
+
+/*************************************
+Forms
+*************************************/
+#rn_PageContent form h2,
+.rn_HeadingBar {
+    background:#F9F9F9;
+    border:1px solid #CCC;
+    clear:both;
+    color:#414142;
+    letter-spacing:-0.03em;
+    padding:4px;
+    margin:20px 0 10px;
+}
+/**generic form legend only visible for screen readers (forms mode)*/
+form legend {
+    font-size:0em;
+    visibility:hidden;
+}
+form fieldset {
+    padding-left:8px;
+}
+form button {
+    margin-top:20px;
+}
+form .rn_Column {
+    margin-bottom:10px;
+}
+.rn_HintBox {
+    background-color:#F2F2F2;
+    border:1px solid #DBDBDB;
+    color:#222;
+    opacity:.7;
+    padding:4px 16px 2px;
+    -webkit-border-top-right-radius:10px;
+    -webkit-border-bottom-right-radius:10px;
+    -moz-border-radius-bottomright:10px;
+    -moz-border-radius-topright:10px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.rn_Required, .rn_ErrorLabel {
+    color:#C10000;
+}
+.rn_ErrorField {
+    background-color:#FEFDA0 !important;
+}
+.rn_MessageBox {
+    background-color:#FFFFE0;
+    border:1px solid #808080;
+    color:#990000;
+    margin:10px 0;
+    padding:6px;
+}
+.rn_ErrorMessage {
+    background:#FFFFE0 url(../branding/images/layout/important.png) no-repeat;
+    padding:8px 6px 8px 40px !important;
+}
+    .rn_ErrorMessage a {
+        color:#990000;
+    }
+.rn_InfoMessage {
+    background:#FFFFE0 url(../branding/images/layout/info.png) no-repeat;
+    padding:6px 6px 4px 40px !important;
+}
+/***************
+Dialogs
+****************/
+.rn_Dialog {
+    overflow:visible;
+}
+.rn_Dialog ol,
+.rn_Dialog ul {
+    padding:0.4em 0 0 1.8em;
+}
+.rn_Dialog ol li {
+    list-style:decimal outside none;
+}
+.rn_Dialog ul li {
+    list-style:disc outside none;
+}
+/**************
+Module Box
+**************/
+.rn_Module {
+    clear:both;
+    margin-bottom: 12px;
+    overflow:hidden;
+    padding-bottom:8px;
+	text-decoration:none;
+	max-height:200px;
+}
+.rn_Module h3,
+.rn_Module h2 {
+    font-family:"Lucida Sans Unicode","Lucida Grande",Garuda,sans-serif;
+    font-weight:bold;
+    margin-bottom:1px;
+    padding:4px;
+}
+/***********
+Misc Common rules
+**********/
+.rn_FloatRight {
+    float:right;
+}
+.rn_FloatLeft {
+    float:left;
+}
+.rn_Padding {
+    padding:8px 10px 2px 10px;
+}
+.rn_ClearBoth {
+    clear:both;
+}
+.rn_Highlight {
+    font-style:normal;
+    font-weight:bold;
+    text-decoration:inherit;
+}
+/**********
+Columns
+**********/
+.rn_ColumnContainer {
+    width:100%;
+}
+.rn_Column {
+    width:48%;
+}
+.rn_LeftColumn {
+    float: left;
+    padding:0 4px 0 0;
+}
+.rn_RightColumn {
+    float:right;
+    padding: 0 0 0 4px;
+}
+.rn_LargeText {
+    font-size:1.333em;
+    font-weight:bold;
+    line-height:1.4em;
+}
+
+/*******************************************
+    08. Answer & Question Detail
+*******************************************/
+#rn_Summary {
+    padding: 7px 0 0 0;
+    line-height:1em;
+    letter-spacing:-.01em;
+}
+#rn_AnswerInfo {
+    color:#888;
+    margin:6px 0 20px;
+}
+#rn_AnswerInfo div {
+    display:inline;
+}
+#rn_AnswerText {
+    clear:both;
+    line-height:1.4em;
+    padding:5px 0 15px;
+}
+#rn_FileAttach {
+    padding-bottom:1em;
+}
+/************
+List styles for answer content
+*************/
+.rn_QuestionDetail ol,
+.rn_QuestionDetail ul,
+.rn_AnswerDetail ol,
+.rn_AnswerDetail ul {
+    padding-left:2em;
+    clear: both;
+}
+.rn_QuestionDetail > ol,
+.rn_QuestionDetail > ul,
+.rn_AnswerDetail > ol,
+.rn_AnswerDetail > ul {
+    margin-bottom:1em;
+}
+.rn_QuestionDetail li,
+.rn_AnswerDetail li {
+    line-height:1.4em;
+    margin:4px;
+}
+/* Unordered lists */
+.rn_QuestionDetail ul li,
+.rn_AnswerDetail ul li {
+    list-style: disc;
+}
+.rn_QuestionDetail li ul li,
+.rn_AnswerDetail li ul li {
+    list-style: circle;
+}
+.rn_QuestionDetail li li ul li,
+.rn_AnswerDetail li li ul li {
+    list-style: square;
+}
+/* Ordered lists */
+.rn_QuestionDetail ol li,
+.rn_QuestionDetail li ol li,
+.rn_QuestionDetail li li ol li,
+.rn_AnswerDetail ol li,
+.rn_AnswerDetail li ol li,
+.rn_AnswerDetail li li ol li {
+    list-style: decimal;
+}
+
+/* Incident thread */
+#rn_UpdateQuestion textarea {
+    width:98%;
+}
+#rn_QuestionThread {
+    margin:4px;
+}
+#rn_AdditionalInfo, #rn_DetailTools {
+    background:#EEE url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==) repeat-x scroll 0 0;
+    *background:#EEE; /* IE6/7 don't support data URI */
+    border:1px solid #BBB;
+}
+/** Additional Details box **/
+#rn_AdditionalInfo {
+    margin:1em;
+    overflow:hidden;
+    padding:12px;
+    width:560px;
+}
+/** Print/Email/Notif/Share Container **/
+#rn_DetailTools {
+    line-height:1em;
+    margin-top:2em;
+    padding:8px 0;
+    text-align: right;
+}
+/*************************************
+    09. Home Page : Top Answers
+*************************************/
+#rn_PageContent.rn_Home ol {
+    margin:12px;
+    overflow:hidden;
+}
+#rn_PageContent.rn_Home ol li {
+    float:left;
+    margin:0px;
+    padding:4px;
+    width:48%;
+}
+#rn_PageContent.rn_Home ol li img {
+    display:none;
+}
+#rn_PageContent.rn_Home ol li a {
+    float:left;
+    font-size:.8em;
+    margin:4px;
+}
+#rn_PageContent.rn_Home .rn_AnswersLink {
+    display:inline-block;
+    font-size:120%;
+    font-weight:bold;
+    margin:10px 0 10px 16px;
+}
+/*************************************
+    10. Account Pages
+*************************************/
+/*********************
+Sprite for overview page
+*********************/
+.rn_Overview {
+    padding:12px 10px 2px;
+}
+.rn_Overview h2 {
+    background-color:#F9F9F9;
+    border:1px solid #DDD;
+    margin-top:10px;
+}
+/* image is 32 x 148 : icons are 32 x 32 */
+.rn_Overview h2 a,
+.rn_Overview h2 strong {
+    background:url(../branding/images/layout/accountOverview.png) no-repeat;
+    color:#505050;
+    display:block;
+    height:26px;
+    margin:4px;
+    outline:none;
+    padding:8px 0 0 40px;
+    text-decoration:none;
+}
+.rn_Overview a:focus,
+.rn_Overview a:hover {
+    text-decoration:underline;
+}
+.rn_Overview a.rn_Questions {
+    background-position: 0px 2px;
+}
+.rn_Overview a.rn_Profile {
+    background-position: 2px -38px;
+}
+.rn_Overview a.rn_Notifs {
+    background-position: 0px -74px;
+}
+.rn_Overview strong.rn_Contracts {
+    background-position: 0px -114px;
+}
+.rn_Overview div.rn_Questions,
+.rn_Overview div.rn_Notifs,
+.rn_Overview div.rn_Profile,
+.rn_Overview div.rn_Contracts {
+    margin:10px 0px 40px 40px;
+}
+.rn_QuestionList caption {
+    font-size:1.333em;
+    font-weight:bold;
+    line-height:1.4em;
+}
+/*********************
+Sprite for login page
+*********************/
+.rn_CreateAccountInfo {
+    background:#FAF9F5;
+    border:1px solid #ECECEC;
+    color:#454545;
+    padding:3px;
+}
+.rn_CreateAccountInfo h2 {
+    text-align: center;
+}
+.rn_CreateAccountInfo button {
+    display:block;
+    margin:auto;
+    width:60%;
+}
+.rn_CreateAccountInfo ul {
+    margin-top:10px;
+}
+.rn_CreateAccountInfo li {
+    background:url(../branding/images/layout/createAccount.png) no-repeat;
+    height:32px;
+    list-style-type: none;
+    margin:4px 0 16px;
+    padding:4px 0px 4px 40px;
+}
+.rn_CreateAccountInfo li.rn_Communicate {
+    background-position: 0px 0px;
+}
+.rn_CreateAccountInfo li.rn_Feedback {
+    background-position: 0px -46px;
+}
+.rn_CreateAccountInfo li.rn_Customize {
+    background-position: 0px -96px;
+}
+
+/********************************
+    11. General Accessibility
+*********************************/
+#rn_SkipNav a {
+    left:0px;
+    height:1px;
+    overflow:hidden;
+    position:absolute;
+    top:-500px;
+    width:1px;
+}
+#rn_SkipNav a:active, #rn_SkipNav a:focus {
+    background-color:#FFF;
+    height:auto;
+    left:auto;
+    top:auto;
+    width:auto;
+}
+
+/****************************
+    12. Print Style
+    (only display content)
+****************************/
+@media print
+{
+    body{
+        font-size:1em;
+    }
+    #rn_DetailTools,
+    #rn_Header,
+    #rn_Navigation,
+    #rn_SideBar,
+    #rn_Footer{
+        display:none;
+    }
+    #rn_Footer, #rn_Body, #rn_PageContent, #rn_PageTitle, #rn_AdditionalInfo{
+        overflow:visible;
+    }
+}
+
+/*******************************************
+    13. Chat Related
+*******************************************/
+
+#rn_ChatContainer {
+    height:100%;
+    margin:0px auto;
+    overflow:visible;
+    text-align:left;
+}
+
+#rn_ChatDialogContainer {
+    background-color:#EBEFF5;
+    border:1px solid #555;
+    overflow-x:hidden;
+    overflow-y:auto;
+    position:relative;
+    height:750px !important;
+}
+
+#rn_ChatDialogHeaderContainer {
+    height:30px;
+    overflow:visible;
+    padding:4px;
+    vertical-align:middle;
+}
+
+#rn_ChatDialogTitle {
+    margin-top: 8px;
+}
+
+#rn_ChatDialogHeaderButtonContainer button{
+    background: none;
+    border-color: transparent;
+    color: #555;
+    margin-right: .25em;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 2px;
+}
+
+#rn_ChatDialogHeaderButtonContainer button:hover,
+#rn_ChatDialogHeaderButtonContainer button:focus{
+    background-color: #F8F8F8;
+    border-color: #CCC #555 #555 #CCC;
+    color: #000;
+}
+
+#rn_InChatButtonContainer {
+    overflow: visible;
+}
+
+#rn_PreChatButtonContainer{
+    overflow: visible;
+}
+
+#rn_ChatQueueSearchContainer {
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+#rn_ChatQueueSearchContainer div.rn_ScreenReaderOnly {
+    display: none;
+}
+
+#rn_ChatFooter {
+    padding: 10px;
+}
+
+#rn_ChatLogo {
+    height:100px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width:135px;
+}
+
+@media print
+{
+    #rn_ChatDialogHeaderContainer,
+    #rn_InChatButtonContainer,
+    #rn_PreChatButtonContainer,
+    #rn_ChatQueueSearchContainer,
+    #rn_ChatLogo {
+        display:none;
+    }
+
+    #rn_ChatContainer {
+        border:0;
+        overflow: visible;
+        height: auto;
+    }
+
+    #rn_ChatDialogContainer {
+        overflow: visible;
+        height: auto;
+    }
+}

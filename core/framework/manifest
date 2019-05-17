@@ -1,0 +1,8 @@
+version: "3.5.2"
+dependencies:
+    yui:
+        version: 3.17.0
+        location: /rnt/rnw/yui_3.17/
+    php:
+        version: 5.6
+        location: /php

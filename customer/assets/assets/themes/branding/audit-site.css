@@ -1,0 +1,84 @@
+.endeca-slot {
+	position: relative;
+}
+
+.endeca-slot-hover > .endeca-slot-highlight-border {
+	display: block;
+}
+
+.endeca-slot-highlight-border {
+	display: none;
+	background: url(../../../../resources/slot_highlight.png);
+	position: absolute;
+}
+
+.endeca-slot-hover > .endeca-audit-button {
+	opacity: 1.0;
+	/*
+	display: inline-block;
+	*/
+}
+
+.endeca-audit-button {
+	/*
+	display: none;
+	*/
+	opacity: 0.4;
+	position:absolute;
+	right: 10px;
+	top: 10px;
+	cursor:pointer;
+	z-index: 10000;
+}
+
+/****************/
+
+.flex-button {
+	margin:0;
+	/*
+	position:relative;
+	display:inline-block;
+	*/
+}
+
+.flex-button * {
+	height: 23px;
+}
+
+.flex-button.hover * {
+	background-position: 0 46px;
+}
+
+.flex-button.down *  {
+	background-position: 0 23px;
+}
+
+.flex-button ul, .flex-button ol {
+	width: 10px;
+	margin:0;
+	padding:0;
+	position:absolute;
+}
+
+.flex-button ul {
+	background-image:url(../../../../resources/button_start.png);
+}
+
+.flex-button ol {
+	background-image:url(../../../../resources/button_end.png);
+	right:0;
+	top:0;
+}
+
+.flex-button span {
+	margin: 0 10px;
+	padding: 0 5px;
+	display:inline-block;
+	font-size:11px;
+	text-align:center;
+	line-height:23px;
+	background-image:url(../../../../resources/button_middle.png);
+	/*
+	cursor:default;
+	*/
+}

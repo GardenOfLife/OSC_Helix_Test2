@@ -1,0 +1,165 @@
+.rn_SocialUserAvatar {
+  *zoom: 1;
+  display: block; }
+  .rn_SocialUserAvatar:before, .rn_SocialUserAvatar:after {
+    content: " ";
+    display: table; }
+  .rn_SocialUserAvatar:after {
+    clear: both; }
+  .rn_SocialUserAvatar h2 {
+    margin-bottom: 20px; }
+  @media screen and (min-width: 53.75em) {
+    .rn_SocialUserAvatar .rn_PreviewImage {
+      margin-left: 8.5298%;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      .rn_SocialUserAvatar .rn_PreviewImage:last-child {
+        margin-right: 0; } }
+  .rn_SocialUserAvatar .rn_PreviewImage img {
+    width: 96px;
+    position: absolute;
+    top: 0; }
+  .rn_SocialUserAvatar .rn_PreviewImage .rn_Refresh {
+    margin-top: 0.4em;
+    margin-right: 0.5em;
+    color: #3b6db1; }
+    .rn_SocialUserAvatar .rn_PreviewImage .rn_Refresh:before {
+      font-family: 'FontAwesome';
+      line-height: 1em;
+      margin-right: 6px;
+      content: "\f021"; }
+  .rn_SocialUserAvatar .rn_Loading::before {
+    display: inline; }
+  @media screen and (min-width: 53.75em) {
+    .rn_SocialUserAvatar .rn_AvatarOptions {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-right: 0; }
+      .rn_SocialUserAvatar .rn_AvatarOptions:last-child {
+        margin-right: 0; } }
+  .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption {
+    *zoom: 1;
+    display: block;
+    padding: 1em 0.5em;
+    border-bottom: 1px dotted #999; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption:before, .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption:after {
+      content: " ";
+      display: table; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption:after {
+      clear: both; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption label {
+      display: block;
+      font-size: larger;
+      margin: 0.4em 0; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption.rn_Gravatar label {
+      background: url('../images/gravatar.png') 0 0 no-repeat no-repeat;
+      padding-left: 28px;
+      min-height: 16px; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption.rn_ChosenAvatar {
+      background: #DDD; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption button {
+      margin: 0.4em 0; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption .rn_Success {
+      color: #008000; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption .rn_Error {
+      color: #F00; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption .rn_StatusIcon {
+      margin-top: 0.6em;
+      display: inline; }
+      .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption .rn_StatusIcon.rn_Permanent i {
+        display: none; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarOption .rn_HintText {
+      color: #333;
+      display: block;
+      font-size: smaller;
+      font-style: normal;
+      font-weight: bold; }
+  .rn_SocialUserAvatar .rn_AvatarOptions .rn_CurrentSocialAvatar {
+    font-style: italic; }
+  .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_LoadingIcon {
+    text-align: center;
+    padding: 3em; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_LoadingIcon img {
+      width: 100px; }
+  .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ClickToChooseText {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-weight: bold; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ClickToChooseText:last-child {
+      margin-right: 0; }
+  .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_CloseGallery {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%;
+    text-align: right;
+    margin-right: 0;
+    color: black;
+    padding: 10px; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_CloseGallery:last-child {
+      margin-right: 0; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_CloseGallery:before {
+      font-family: 'FontAwesome';
+      line-height: 1em;
+      margin-right: 6px;
+      content: "\f00d"; }
+  .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ProfilePictures {
+    display: inline-block; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ProfilePictures div {
+      padding: 1em;
+      display: inline-block; }
+      .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ProfilePictures div img {
+        padding: 2px;
+        border-style: groove; }
+        .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ProfilePictures div img.rn_Clicked {
+          border-color: green;
+          border-style: solid;
+          border-width: thick; }
+  .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ImagePaginator {
+    text-align: center;
+    padding-top: 2em; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ImagePaginator a {
+      color: black;
+      padding: 8px 16px;
+      border: 1px solid gray; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ImagePaginator .rn_CurrentPages a.rn_Selected {
+      background-color: #4b80cb;
+      color: white;
+      border: 1px solid #4b80cb; }
+    .rn_SocialUserAvatar .rn_AvatarOptions .rn_AvatarLibraryForm .rn_ImagePaginator .rn_CurrentPages a:hover:not(.rn_Selected) {
+      background-color: lightgrey; }
+  .rn_SocialUserAvatar .rn_NoSocialUser {
+    padding: 4px 0 4px 40px;
+    font-size: 1.2em;
+    font-style: italic; }
+
+.rn_SocialUserAvatarDialog .rn_DialogNote {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%; }
+  .rn_SocialUserAvatarDialog .rn_DialogNote:last-child {
+    margin-right: 0; }
+  .rn_SocialUserAvatarDialog .rn_DialogNote .rn_DialogNoteLabel {
+    font-weight: bold; }
+.rn_SocialUserAvatarDialog .rn_DialogAvatarImages {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%; }
+  .rn_SocialUserAvatarDialog .rn_DialogAvatarImages:last-child {
+    margin-right: 0; }
+  .rn_SocialUserAvatarDialog .rn_DialogAvatarImages img {
+    float: right; }
+  .rn_SocialUserAvatarDialog .rn_DialogAvatarImages .rn_UserAvatar {
+    text-align: center; }
+    .rn_SocialUserAvatarDialog .rn_DialogAvatarImages .rn_UserAvatar:last-child {
+      margin-top: 1em; }

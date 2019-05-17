@@ -1,0 +1,147 @@
+/*
+ * Copyright 2001, 2012, Oracle and/or its affiliates. All rights reserved.
+ * Oracle and Java are registered trademarks of Oracle and/or its
+ * affiliates. Other names may be trademarks of their respective owners.
+ * UNIX is a registered trademark of The Open Group.
+ *
+ * This software and related documentation are provided under a license
+ * agreement containing restrictions on use and disclosure and are
+ * protected by intellectual property laws. Except as expressly permitted
+ * in your license agreement or allowed by law, you may not use, copy,
+ * reproduce, translate, broadcast, modify, license, transmit, distribute,
+ * exhibit, perform, publish, or display any part, in any form, or by any
+ * means. Reverse engineering, disassembly, or decompilation of this
+ * software, unless required by law for interoperability, is prohibited.
+ * The information contained herein is subject to change without notice
+ * and is not warranted to be error-free. If you find any errors, please
+ * report them to us in writing.
+ * U.S. GOVERNMENT END USERS: Oracle programs, including any operating
+ * system, integrated software, any programs installed on the hardware,
+ * and/or documentation, delivered to U.S. Government end users are
+ * "commercial computer software" pursuant to the applicable Federal
+ * Acquisition Regulation and agency-specific supplemental regulations.
+ * As such, use, duplication, disclosure, modification, and adaptation
+ * of the programs, including any operating system, integrated software,
+ * any programs installed on the hardware, and/or documentation, shall be
+ * subject to license terms and license restrictions applicable to the
+ * programs. No other rights are granted to the U.S. Government.
+ * This software or hardware is developed for general use in a variety
+ * of information management applications. It is not developed or
+ * intended for use in any inherently dangerous applications, including
+ * applications that may create a risk of personal injury. If you use
+ * this software or hardware in dangerous applications, then you shall
+ * be responsible to take all appropriate fail-safe, backup, redundancy,
+ * and other measures to ensure its safe use. Oracle Corporation and its
+ * affiliates disclaim any liability for any damages caused by use of this
+ * software or hardware in dangerous applications.
+ * This software or hardware and documentation may provide access to or
+ * information on content, products, and services from third parties.
+ * Oracle Corporation and its affiliates are not responsible for and
+ * expressly disclaim all warranties of any kind with respect to
+ * third-party content, products, and services. Oracle Corporation and
+ * its affiliates will not be responsible for any loss, costs, or damages
+ * incurred due to your access to or use of third-party content, products,
+ * or services.
+ */
+
+.endeca-slot {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.endeca-slot-hover > .endeca-slot-highlight-border {
+	display: block;
+}
+
+.endeca-slot-highlight-border {
+	display: none;
+	background: url(slot_highlight.png);
+	position: absolute;
+}
+
+.endeca-slot-hover > .endeca-audit-button {
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	/*
+	display: inline-block;
+	*/
+}
+
+.endeca-audit-button {
+	/*
+	display: none;
+	*/
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	position:absolute;
+	right: 10px;
+	top: 10px;
+	cursor:pointer;
+	z-index: 10000;
+}
+
+.endeca-preview-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol.endeca-preview-reset, ul.endeca-preview-reset {
+	list-style: none;
+}
+
+/****************/
+
+.flex-button {
+	margin:0;
+	/*
+	position:relative;
+	display:inline-block;
+	*/
+}
+
+.flex-button * {
+	height: 23px;
+}
+
+.flex-button.hover * {
+	background-position: 0 46px;
+}
+
+.flex-button.down *  {
+	background-position: 0 23px;
+}
+
+.flex-button ul, .flex-button ol {
+	width: 10px;
+	margin:0;
+	padding:0;
+	position:absolute;
+}
+
+.flex-button ul {
+	background-image:url(button_start.png);
+}
+
+.flex-button ol {
+	background-image:url(button_end.png);
+	right:0;
+	top:0;
+}
+
+.flex-button span {
+	margin: 0 10px;
+	padding: 0 5px;
+	display:inline-block;
+	font-size:11px;
+	text-align:center;
+	line-height:23px;
+	background-image:url(button_middle.png);
+	/*
+	cursor:default;
+	*/
+}

@@ -1,0 +1,52 @@
+version: "1.0"
+requires:
+  jsModule:
+  - standard
+  - mobile
+attributes:
+  channels:
+    name: channels
+    type: multioption
+    description: The channels to display, in the desired order.
+    options:
+    - question
+    - chat
+    - callus
+    - feedback
+    default:
+    - question
+    - chat
+    - callus
+    - feedback
+    required: true
+  callus_description_label:
+    name: callus_description_label
+    type: string
+    description: An optional description to display beneath the link.
+    default: ""
+    required: false
+  callus_label:
+    name: callus_label
+    type: string
+    description: The text to display as the link.
+    default: Call Us
+    required: false
+  callus_link:
+    name: callus_link
+    type: string
+    description: The target to navigate to on click. This value is passed along to
+      the SiteFeedback 'feedback_page_url' attribute by default.
+    default: ""
+    required: false
+  callus_view:
+    name: callus_view
+    type: string
+    description: The name of the view partial used to render the callus link. The
+      standard widget view partials can be viewed in the cp/core/widgets/standard/utils/ContactUs/
+      directory (Channel, Chat, Feedback).
+    default: Callus
+    required: false
+extends:
+  widget: standard/utils/ContactUs
+  components: []
+  overrideViewAndLogic: "true"

@@ -1,0 +1,341 @@
+	<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Service Request Table</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />  
+  <link href="css/styles.css?1" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.coolfieldset.css?1" rel="stylesheet" type="text/css" />
+  <!--[if IE 7]>
+  <link href="css/ie7.css?1" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.coolfieldset.js"></script>
+  <script type="text/javascript" src="js/sugar.js"></script>
+  <script type="text/javascript">
+	var server = "unit7479.oracleads.com";
+	var contactId = getParameterByName("ContactId");
+	var srNumber=getParameterByName("SRNumber");
+	var stNumber=getParameterByName("STNumber");
+	var srStatus=getParameterByName("SRStatus");
+	var srSummary=getParameterByName("SRSummary");
+	var startingRow = getParameterByName("startingRow");
+	var ischat = getParameterByName("isChat");
+	
+	if (startingRow != "")
+		{
+		$("#currentRow").val(startingRow);
+		$('#pageRight').show();
+		if (startingRow >= 10)
+			{
+			$('#pageLeft').show();
+			}
+		}
+	
+	
+	
+	function getData() 
+	{
+		$.ajax({
+			url: "http://localhost:9010/SiebelMockSvc/rest/v1/SR/by_contact/" + contactId + "?callback=parseSRs",
+			dataType: 'jsonp',
+			jsonpCallback: 'parseSRs'
+		});
+	}
+	
+	function parseSRs(json)
+	{
+		$.each(json.ServiceRequests, function(key, obj) {
+			var rowLink = "<a href='SRDetails.htm?rowId=" + obj.SRID + "&ContactId="+ contactId + "'>" + obj.SRID + "</a>";
+			$("#myTable").append("<tr class='rowResults' id='" + obj.SRID + "'><td class='left'>"+(rowLink)+"</td><td class='center'>"+ eval("new " + obj.CreatedDate.replace(/[\\/]/g, "")).format() +"</td><td class='center'>"+(obj.Title)+"</td><td class='center'>"+(obj.Severity)+"</td><td class='center'>"+(obj.Status)+"</td><td class='center'>CCHENG</td><td class='nodisplay'><textarea>" + (obj.Abstract) + "</textarea></td></tr>");
+		});
+		
+		$("tr#loading_row").remove();
+	}
+	
+	function initialize()
+		{
+			
+			$('#stNumber').val(stNumber); 
+			$('#srStatus').val(srStatus); 
+			$('#srSummary').val(srSummary); 
+			$('#server').val(server);
+			$('#contactId').val(contactId);
+			$('#pageRight').hide();
+			$('#pageLeft').hide();
+			$('#srNumber').val(srNumber); 
+			
+			$("#popupdesc").width(480); 
+			
+			if (ischat == "yes")
+			{
+				$("#popupdesc").css("display", "none");
+			} 
+			else 
+			{
+				$("#popupdesc").css("display", "block");
+			}
+			
+			var loading_row = $("<tr id='loading_row'><td colspan='8' id='loading'>&nbsp;</td></tr>");
+			$("#myTable tr:last").after(loading_row);
+			
+			//postRequest();
+			setTimeout(getData, 2000);
+		}
+	function getParameterByName(name)
+		{
+		  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		  var regexS = "[\\?&]" + name + "=([^&#]*)";
+		  var regex = new RegExp(regexS);
+		  var results = regex.exec(window.location.href);
+		  if(results == null)
+			return "";
+		  else
+			return decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+	function pageLeft()
+		{
+			var proposedNewRow = $("#currentRow").val() - 10;
+			if (proposedNewRow >= 0)
+				{
+					$("#currentRow").val(proposedNewRow);
+					$("#pageRight").show();
+					if (proposedNewRow < 10)
+						{
+							$("#pageLeft").hide();
+						}
+					postRequest();
+				}
+		}
+	function pageRight()
+		{
+			var proposedNewRow = $("#currentRow").val() - (-10); //subtract negative 10 to prevent string concatenation
+			var recordCount = $('#recordCount').val();
+			var rowDifference = recordCount - proposedNewRow - 1;
+			if (rowDifference >=0)
+				{
+					$("#currentRow").val(proposedNewRow);
+					$("#pageLeft").show();
+					postRequest();
+				}
+		}
+	function BuildSOAPRequest(contactId)
+		{
+		//Define components of the SOAPRequest
+		var XMLtxt1 = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:ser='http://siebel.com/Service/FS/ServiceRequests' xmlns:quer='http://www.siebel.com/xml/Service%20Request/Query'><soapenv:Header/><soapenv:Body><ser:ServiceRequestQueryPage_Input><quer:ListOfWc_Service_Request_Io pagesize='5' startrownum='"
+		var XMLtxt2 = "' recordcountneeded='true'><quer:ServiceRequest><quer:Id></quer:Id><quer:Created sortorder='DESC' sortsequence='1'></quer:Created><quer:Updated></quer:Updated><quer:ConflictId></quer:ConflictId><quer:ModId></quer:ModId><quer:Abstract>";
+		var XMLtxt3 = "</quer:Abstract><quer:Account></quer:Account><quer:AccountId></quer:AccountId><quer:Area></quer:Area><quer:AssetId></quer:AssetId><quer:AssetNumber></quer:AssetNumber><quer:BillableFlag></quer:BillableFlag><quer:CommitTime></quer:CommitTime><quer:ContactAccount></quer:ContactAccount><quer:ContactAccountId></quer:ContactAccountId><quer:ContactAccountIntegrationId></quer:ContactAccountIntegrationId><quer:ContactBusinessPhone></quer:ContactBusinessPhone><quer:ContactClosedDate></quer:ContactClosedDate><quer:ContactCommitTime></quer:ContactCommitTime><quer:ContactCreated></quer:ContactCreated><quer:ContactEmail></quer:ContactEmail><quer:ContactFirstName></quer:ContactFirstName><quer:ContactFullName></quer:ContactFullName><quer:ContactHomePhone></quer:ContactHomePhone><quer:ContactId>"
+		var XMLtxt4 = "</quer:ContactId><quer:ContactLastName></quer:ContactLastName><quer:ContactTimeZone></quer:ContactTimeZone><quer:ContactTimeZoneId></quer:ContactTimeZoneId><quer:CreatedByName></quer:CreatedByName><quer:Description></quer:Description><quer:EntitlementId></quer:EntitlementId><quer:EntitlementName></quer:EntitlementName><quer:Name></quer:Name><quer:OwnedById></quer:OwnedById><quer:Owner></quer:Owner><quer:OwnerPositionId></quer:OwnerPositionId><quer:OwnerPositionOrgId></quer:OwnerPositionOrgId><quer:ParentSRAbstract></quer:ParentSRAbstract><quer:ParentSRNumber></quer:ParentSRNumber><quer:PriceList></quer:PriceList><quer:PriceListId></quer:PriceListId><quer:Priority></quer:Priority><quer:Product></quer:Product><quer:ProductId></quer:ProductId><quer:SRNumber>";
+		var XMLtxt5 = "</quer:SRNumber><quer:SerialNumber></quer:SerialNumber><quer:ServiceRegion></quer:ServiceRegion><quer:ServiceRegionId></quer:ServiceRegionId><quer:ServiceRequestType></quer:ServiceRequestType><quer:Severity></quer:Severity><quer:Source></quer:Source><quer:Status>";
+		var XMLtxt6 = "</quer:Status><quer:Sub-Area></quer:Sub-Area><quer:Sub-Status></quer:Sub-Status><quer:Type></quer:Type><quer:Version></quer:Version><quer:WarrantyUpdatedDt></quer:WarrantyUpdatedDt><quer:WarrantyEndDate></quer:WarrantyEndDate></quer:ServiceRequest></quer:ListOfWc_Service_Request_Io><ser:LOVLanguageMode>LDC</ser:LOVLanguageMode></ser:ServiceRequestQueryPage_Input></soapenv:Body></soapenv:Envelope>";
+		//Build the SOAPRequest from the above components plus dynamic elements from the UI
+		
+		//Build the SOAPRequest from the above components plus dynamic elements from the UI	
+		var currentRow = $("#currentRow").val();
+		var XMLtxt= XMLtxt1 + currentRow + XMLtxt2;
+		var XMLtxt01 = "";
+		if ($("#srSummary").val() != "" )
+		 {
+			XMLtxt01= XMLtxt + "LIKE '" + $("#srSummary").val()  + "'";
+		 }
+		 else
+			XMLtxt01 = XMLtxt;
+		 XMLtxt= XMLtxt01 + XMLtxt3;
+		  if ($("#contactId").val() !="" )
+		 {
+			XMLtxt01= XMLtxt + "LIKE '" + $("#contactId").val()  + "'";
+		 }
+		 else
+			XMLtxt01 = XMLtxt;
+		XMLtxt= XMLtxt01 + XMLtxt4;
+		 if ($("#srNumber").val() !="" )
+		 {
+			XMLtxt01= XMLtxt + "LIKE '" + $("#srNumber").val()  + "'";
+		 }
+		 else
+		XMLtxt01 = XMLtxt;
+		 XMLtxt= XMLtxt01 + XMLtxt5;
+		 if ($("#srStatus").val() != "" )
+		 {
+			XMLtxt01= XMLtxt + "LIKE '" + $("#srStatus").val()  + "'";
+		 }
+		 else
+			XMLtxt01 = XMLtxt;
+		 XMLtxt= XMLtxt01 + XMLtxt6;
+		$("#SWEExtData").val(XMLtxt);
+		}
+	function postRequest()
+		{
+		$("#contents").html(" ");
+		//First, build SOAPRequest to include the entered user
+		BuildSOAPRequest($("#contactId").val());
+		//Retrieve SOAP Request as displayed in the UI
+		var soapRequest = $("#SWEExtData").val();
+		//Define web service URL
+		var URL = "http://" + $('#server').val() + "/eai_enu/start.swe?SWEExtSource=WebService&SWEExtCmd=Execute&UserName=SADMIN&Password=SADMIN";
+		//Define SOAPAction
+		var soapaction = '\"document/http://siebel.com/Service/FS/ServiceRequests:ServiceRequestQueryPage\"';
+		//Set SOAPAction
+		$.ajaxSetup({
+			beforeSend : function(xhr) {
+					xhr.setRequestHeader('SOAPAction', soapaction);
+			}
+		});
+		//Remove existing rows to clear any previous results
+		$("#myTable").find('tr.rowResults').remove();
+		
+		// Add loading graphic -- Wayne
+		var loading_row = $("<tr id='loading_row'><td colspan='8' id='loading'>&nbsp;</td></tr>");
+		$("#myTable tr:last").after(loading_row);
+		
+		//Make SOAPRequest
+		$.ajax({
+			url: URL,
+			type: "POST",
+			dataType: "xml",
+			data: soapRequest,
+			error:function(xhr,err){
+				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status);
+				alert("responseText: "+xhr.responseText);
+				},
+			complete: processResults,
+			contentType: "text/xml; charset=\"utf-8\""
+			});
+		}
+ 
+		function processResults(xhr, status)
+		{
+			// Remove loading graphic -- Wayne
+			$("#myTable").find('tr#loading_row').remove();
+			
+			var soapResponse = xhr.responseText;
+			$("#theResponse").val(soapResponse);
+			var recordCount = $(xhr.responseXML).find('ListOfWc_Service_Request_Io').attr('recordcount');
+			$("#recordCount").val(recordCount);
+			if (recordCount < 10)  //Hide navigation links when you only get back one page of data or less
+				{
+					$("#pageRight").hide();
+					$("#pageLeft").hide();
+				}
+			else if ((recordCount - $("#currentRow").val() - 10) <= 0)  //Hide the right navigation link if your on the last page of data
+				{
+					$("#pageRight").hide();
+				}
+			else      //Otherwise show the right navigation link
+				{
+			$("#pageRight").show();
+				}
+			$(xhr.responseXML).find('ListOfWc_Service_Request_Io').find('ServiceRequest').each(function(i)
+				{
+					var rowId = $(this).find('Id').text();
+					var SRNumber = $(this).find('SRNumber').text();
+					var rowLink = "<a href='http://" + $('#server').val() + "/SRDetails.htm?rowId=" + rowId + "&currentRow=" + $("#currentRow").val() + "&ContactId="+$("#contactId").val() + "'>" + SRNumber + "</a>";
+					var created = $(this).find('Created').text();
+					var summary = $(this).find('Abstract').text();
+					var asset = $(this).find('AssetNumber').text();
+					var product = $(this).find('Product').text();
+					var status = $(this).find('Status').text();
+					var severity = $(this).find('Severity').text();
+					var owner = $(this).find('Owner').text();
+					var desc = $(this).find('Description').text();
+					var newRow = "<tr class='rowResults' id='" + rowId + "'><td class='left'>"+(rowLink)+"</td><td class='center'>"+(created)+"</td><td class='center'>"+(summary)+"</td><td class='center'>"+(product)+"</td><td class='center'>"+(severity)+"</td><td class='center'>"+(status)+"</td><td class='center'>"+(owner)+"</td><td class='nodisplay'><textarea>" + (desc) + "</textarea></td></tr>";
+					$("#myTable").append(newRow);
+				});			
+			$("#contents").height($("#myTable").height());
+		}
+		
+		function goSearch()
+		{
+		var newLocation = "SRList.htm?SRNumber=" + $("#srNumber").val() + "&STNumber=" + $("#stNumber").val()+ "&SRStatus=" + $("#srStatus").val()+"&SRSummary=" + $("#srSummary").val()+"&ContactId=" + $("#contactId").val();
+
+			window.location.assign(newLocation);
+		}
+		$(function() {
+			$("#fieldset1").coolfieldset({ collapsed: true });			
+			$("tr.rowResults").live("mouseenter", function() {
+				var id = $(this).attr("id");
+				var str = $("tr#" + id + " td:last textarea").val().replace(/\n/g, '<br />').replace(/AJ:/g, '<span style="color: red;">AJ</span>:').replace(/Randy Alsup:/, '<span style="color: blue">Randy Alsup</span>:');
+				//var str = $("tr#" + id + " td:last textarea").val();
+				$("#contents").html(str);
+			});
+		});
+  </SCRIPT>
+</head>
+<body onload="initialize();">
+<input type="hidden" id="currentRow" value="0" />
+<input type="hidden" id="server" />
+<div class="wrapper"> 
+   <div style="position: absolute; top: 10px; right: 10px;">
+	<a id="pageLeft" href="javascript:pageLeft()" class="button">Previous</a> 
+	<a id="pageRight" href="javascript:pageRight()" class="button">Next</a>
+</div>
+  <fieldset id="fieldset1" class="coolfieldset">
+	<input type=hidden id="recordCount" name="recordCount" />
+	<input type=hidden id="contactId" name="contactId" value="$('#contactId').val()" />
+	<legend style="font-size: 12px;">Search Options</legend>
+	<div>
+		<table id="search_tbl">		  
+		  <tr>
+			<td class="label"><label for="srNumber">SR #:</label><input type="text" id="srNumber" name="srNumber" /></td>			
+			<td class="label"><label for="srSummary">Summary:</label><input type="text" id="srSummary" name="srSummary" /></td>			
+			<td class="label">
+				<label for="srStatus">Status:</label>
+				<select name="srStatus" id="srStatus">
+					<option value="">All</option>
+					<option value="Open">Open</option>
+					<option value="Pending">Pending</option>
+					<option value="Closed">Closed</option>
+					<option value="Cancelled">Cancelled</option>
+					<option value="Exception Handling">Exception Handling</option>
+					<option value="Quoted">Quoted</option>
+					<option value="Duplicate">Duplicate</option>
+					<option value="In Progress">In Progress</option>
+					<option value="Completed">Completed</option>
+					<option value="Submitted">Submitted</option>
+					<option value="Approved">Approved</option>
+					<option value="Revised">Revised</option>
+					<option value="Rejected">Rejected</option>
+					<option value="Not Started">Not Started</option>
+				</select>				
+			</td>			
+			<td style="vertical-align: bottom;"><a href="javascript:goSearch();" class="button">Search</a></td> 
+			</tr>			
+		</table>
+	</div>
+  </fieldset>
+  
+<table id="myTable" style="width: 640px; float: left;">
+	<tr>
+		<th class="left">SR #</th>
+		<th class="center">Created</th>
+		<th class="center">Summary</th>		
+		<th class="center">Severity</th>
+		<th class="center">Status</th>
+		<th class="center">Owner</th>
+		<th class="nodisplay">Description</th>
+	</tr>
+</table>
+<div id="popupdesc" style="float: left; padding: 5px; margin-left: 20px; margin-top: 18px; overflow-y: auto; width: 480px; border: 1px solid black;">
+	<strong style="display: block; font-size: 12px; text-decoration: underline;">Description</strong>
+	<div id="contents" style="font-size: 12px; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 100%; border: 0; overflow-x: hidden;" rows="8">
+	
+	</div>
+</div>
+  <table bgcolor="white" align="center" width="100%" border="0" height="1">
+	    <tr>
+	    <!--  <td><font face="ARIAL" size=2>SOAP Request: </td> 
+		 <td colspan="2" width="750" height="1"><textarea rows="22" id="SWEExtData" name="SWEExtData" cols="75" display:none">></textarea></td> -->
+	      <td colspan="2" width="750" height="1"><textarea rows="22" id="SWEExtData" name="SWEExtData" cols="75" style="visibility:hidden; display:none">></textarea></td>
+
+	    </tr>
+	    <tr>
+	      <!--<td><font face="ARIAL" size=2>SOAP Response: </td>
+		   <td colspan="2" width="750" height="1"><textarea rows="22" id="theResponse" name="theResponse" cols="75" display:none">></textarea></td>-->
+	      <td colspan="2" width="750" height="1"><textarea rows="22" id="theResponse" name="theResponse" cols="75"style="visibility:hidden; display:none">></textarea></td>
+	    </tr>
+</table>
+<p><a href="http://" + $('#server').val() + "/callcenter_enu/start.swe?SWECmd=ExecuteLogin&SWEUserName=SADMIN&SWEPassword=SADMIN" target="mySiebelWindow"></a>
+</div>
+<div style="display: none;"><img src="css/ajax-loader.gif" alt="" /></div>
+</body>
+</html>

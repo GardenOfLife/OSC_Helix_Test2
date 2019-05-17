@@ -1,0 +1,26 @@
+rn_TopAnswers .rn_Title {
+    //font-size: 1.111em;
+	font-size: 0	.899em;
+}
+
+.rn_TopAnswers li {
+    margin-bottom: 12px;
+}
+
+.rn_TopAnswers ul {
+    padding-top: 3px;
+    padding-bottom: 48px;
+}
+
+.rn_TopAnswers .rn_Title a {
+    color: #4e4e4e;
+    font-family: "DepotNew-Bd";
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+}
+
+@media screen and (min-width: 720px){
+    .rn_TopAnswers ul { columns: 2; }
+    .rn_TopAnswers li{ margin-bottom: 12px;width: 100%;}
+}

@@ -1,0 +1,17 @@
+/**
+ * base.css: Base CSS for ContactUsCustom
+ */
+.rn_PhoneLink, 
+.rn_FeedbackLink, 
+.rn_QuestionLink {
+	margin-top: 30px !important;
+}
+.rn_ContactUsCustom .rn_Well h2 {
+    border-bottom: 1px solid #c6c6c6;
+    padding: 0 0 0 0;
+    padding-bottom: 20px;
+    margin: 0 0 30px 0;
+}
+.rn_ContactUsCustom .rn_Well {
+    padding: 20px 5px 60px 30px;
+}

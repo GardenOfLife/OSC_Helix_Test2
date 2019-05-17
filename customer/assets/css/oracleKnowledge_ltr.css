@@ -1,0 +1,1270 @@
+/**
+ * Copyright (c) 2002, 2012 Oracle and/or its affiliates. All rights reserved.
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.
+ *
+ * This software and related documentation are provided under a license agreement containing restrictions
+ * on use and disclosure and are protected by intellectual property laws. Except as expressly permitted
+ * in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify,
+ * license, transmit, distribute, exhibit, perform, publish or display any part, in any form, or by any means.
+ * Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.
+ *
+ * The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.
+ *
+ * If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, the following notice is applicable:
+ *
+ * U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software,
+ * any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software"
+ * pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication,
+ * disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed
+ * on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.
+ *
+ * This software or hardware is developed for general use in a variety of information management applications. It is
+ * not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of
+ * personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all
+ * appropriate fail- safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates
+ * disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.
+ *
+ * This software or hardware and documentation may provide access to or information on content, products and services from third parties.
+ * Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to
+ * third-party content, products, and services. Oracle Corporation and its affiliates will not be responsible for any loss, costs,
+ * or damages incurred due to your access to or use of third-party content, products, or services.
+ *
+ */
+/*
+ * These styles are for the Oracle Knowledge Widget Library integration with RightNow Customer Portal
+*/
+.rn_Module {
+    min-height: 67px;
+}
+.ok_AnswerList {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.ok_Home {
+    border-bottom: none !important;
+}
+
+.ok_Result {
+    padding-top: 20px;
+    overflow: auto;
+}
+
+#ok_BrowseChannel {
+    background: #F1F1F1; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: -moz-linear-gradient(center top , #FFFFFF 20%, #F1F1F1 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#FFFFFF), color-stop(80%,#F1F1F1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FFFFFF 20%,#F1F1F1 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FFFFFF 20%, #F1F1F1 80%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #FFFFFF 20%, #F1F1F1 80%); /* IE10+ */
+    background: linear-gradient(to bottom, #FFFFFF 20%, #F1F1F1 80%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F1F1F1',GradientType=0 ); /* IE6-8 */
+    margin-left: -16px;
+    padding: 12px 10px;
+}
+
+#ok_FacetContainer {
+    width: 28%;
+    float: left;
+}
+
+#ok_ResultContainer {
+    width: 70%;
+    float: right;
+    padding-right: 5px;
+}
+
+#ok_CategoryContainer {
+    width: 25%;
+    float: left;
+    border: 1px solid #BEBEBE;
+}
+
+.hiddenCategoryContainer {
+    width: 0 !important;
+    opacity: 0 !important;
+}
+
+#ok_AnswerListContainer {
+    width: 73%;
+    float: right;
+    border: 1px solid #BEBEBE;
+}
+
+.wideAnswerListContainer {
+    width: 99% !important;
+}
+
+.yui3-oracleknowledge-active {
+    background: url(../themes/standard/images/remove.png) right no-repeat transparent;
+    padding-right: 18px;
+}
+
+.yui3-oracleknowledge-okutility-translucent {
+    opacity: 0.7;
+}
+
+#ok_ActivityIndicator, #ok_sideBarSearchActivityIndicator, .yui3-oracleknowledge-categoryexplorer-activityIndicator,
+.yui3-oracleknowledge-answerview-activityIndicator, .yui3-oracleknowledge-casedeflection-activityIndicator {
+    background: url(../themes/standard/images/loading.gif) no-repeat scroll
+        center center;
+    z-index: 9999;
+    width: 1025px;
+    height: 100%;
+    margin-left: -620px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.yui3-oracleknowledge-casedeflection-activityIndicator , .activityIndicatorCenterPanel {
+    width: 875px !important;
+    left: -450px !important;
+}
+
+#ok_ActivityPageBlock {
+    z-index: 9999;
+    width: 1025px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.yui3-oracleknowledge-searchwidget, .yui3-oracleknowledge-resultwidget, .yui3-oracleknowledge-facettree,
+.yui3-oracleknowledge-answerview, .yui3-oracleknowledge-answerlist, .yui3-oracleknowledge-categorytree, .yui3-oracleknowledge-categoryexplorer,
+.yui3-oracleknowledge-ratingswidget, .yui3-oracleknowledge-casedeflection, .yui3-oracleknowledge-channelwidget-channel {
+    direction: ltr;
+}
+/* SEARCH WIDGET */
+.yui3-oracleknowledge-searchwidget-searchField {
+    font-weight: bold;
+    height: 1.3em;
+    margin-bottom: 20px;
+    padding: 4px 4px 3px;
+    width: 100%;
+}
+
+.yui3-oracleknowledge-searchwidget-lowerDiv {
+    width: 530px;
+}
+
+.yui3-oracleknowledge-searchwidget-inputBox {
+    width: 450px;
+    margin-top: 16px;
+    margin-right : 10px;
+    float: left;
+}
+
+.yui3-oracleknowledge-searchwidget-submitButton {
+    display: inline-block;
+}
+
+.yui3-oracleknowledge-searchwidget-languangesLink {
+     margin-left: 20px;
+}
+
+.yui3-oracleknowledge-searchwidget-languageContainer {
+    margin-top: 10px;
+    margin-left : 160px;
+}
+
+.yui3-oracleknowledge-searchwidget-languageContainer fieldset {
+    display: inline;
+    padding: 3px;
+    width: 170px;
+}
+
+.yui3-oracleknowledge-searchwidget-languageContainer fieldset label {
+    padding-left: 5px;
+}
+
+.yui3-oracleknowledge-searchwidget-languangesLinkDiv {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.yui3-oracleknowledge-searchwidget-startOverLinkDiv {
+    float: right;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+.yui3-oracleknowledge-searchwidget-contentTypeSelectionDiv {
+    float: left;
+}
+/* Search Tips Overlay */
+.yui3-widget-bd {
+    background: none repeat scroll 0 0 #F9F9FC;
+    border: 1px solid #CCC;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    color: #666;
+    font-size: 12px;
+    margin: 15px 0;
+    padding-bottom: 1px;
+    position: relative;
+    height: auto;
+    width: 450px;
+    z-index: 100;
+}
+
+.yui3-widget-bd h4 {
+    background: none repeat scroll 0 0 #CCC;
+    border-radius: 4px 4px 0 0;
+    color: #FFF;
+    cursor: move;
+    font-weight: bold;
+    margin: 0;
+    padding: 4px 10px 5px;
+    position: relative;
+}
+
+.yui3-oracleknowledge-searchwidget-hideSearchTips {
+    background-color: #F9F9FC;
+    border: 1px solid #CCC;
+    color: #AAA;
+    display: block;
+    font-weight: bold;
+    height: 18px;
+    margin: 4px;
+    padding: 0;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    text-decoration: none;
+    top: 1px;
+    width: 17px;
+}
+
+.yui3-widget-bd p {
+    padding: 0 10px;
+}
+
+.yui3-widget-bd ul li {
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.yui3-widget-bd .yui3-oracleknowledge-facettree-facetsList ul li {
+    margin-bottom: 0;
+}
+/*  SIMPLE SEARCH WIDGET  */
+.ok_SimpleSearch {
+    margin: auto;
+    width: 180px;
+    background-color: #FFFFFF;
+    border: 1px solid #B1B1B1;
+    height: 28px\9; /* set height for IE only */
+}
+
+.ok_SimpleSearch .yui3-oracleknowledge-searchwidget-inputBox {
+    width: 156px;
+    margin-top: 0;
+    margin-right : 0;
+}
+
+.ok_SimpleSearch .yui3-oracleknowledge-searchwidget-searchField {
+    border: 0 none;
+    color: #222222;
+    font-weight: bold;
+    height: 22px;
+    padding: 3px 3px 1px;
+    margin-bottom: 0;
+    width: 150px;
+}
+
+.ok_SimpleSearch .yui3-oracleknowledge-searchwidget-searchButton {
+    border: medium none;
+    padding: 0;
+    position: relative;
+    top: 4px;
+}
+
+.ok_SimpleSearch .yui3-oracleknowledge-searchwidget-searchForm fieldset
+{
+    padding-left: 0;
+    height: 26px;
+}
+
+.ok_SimpleSearch .yui3-oracleknowledge-searchwidget-languangesLinkDiv {
+    display: none;
+}
+
+#ok_FacetWidgetContainer {
+    width: 30%;
+    display: inline;
+}
+
+#ok_ResultWidgetContainer,#ok_FacetWidgetContainer {
+    margin-top: 0px;
+}
+
+.answerFrame {
+    min-height: 500px;
+    width: 100%;
+    border: none;
+}
+
+.narrow {
+    float: left;
+    width: 24% !important;
+    margin-top: 10px !important;
+}
+
+.narrow .yui3-oracleknowledge-resultwidget {
+    margin-right: -5px;
+}
+
+.collapsed {
+    display: none !important;
+}
+
+#ok_SimpleSearchAnswerViewContainer {
+    position: relative;
+    width: 76%;
+    background:#DAE4F2;
+    box-shadow: 5px 0 5px 1px #AAAAAA;
+    margin-top: 5px;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 660px;
+}
+
+#ok_SearchResultContainer,#AnswerViewContainer {
+    background-color: #F2F2F2;
+}
+
+#AnswerViewContainer {
+    min-height: 660px;
+}
+
+#ok_SearchResultContainer .yui3-widget-hd,#AnswerViewContainer .yui3-widget-hd,#CaseDeflectionPanelContainer .yui3-widget-hd
+{
+    background: #F1F1F1; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: -moz-linear-gradient(center top, #FFFFFF 10%, #DDDDDD 90%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #FFFFFF),
+        color-stop(90%, #DDDDDD) ); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FFFFFF 10%, #DDDDDD 90%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FFFFFF 10%, #DDDDDD 90%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #FFFFFF 10%, #DDDDDD 90%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #FFFFFF 10%, #DDDDDD 90%);
+    /* W3C */
+    filter: progid :   DXImageTransform.Microsoft.gradient (
+        startColorstr =
+         '#FFFFFF', endColorstr =   '#DDDDDD', GradientType =   0 );
+    /* IE6-8 */
+    color: #000000;
+    font-weight: bold;
+    line-height: 3;
+    padding: 0 10px;
+    height: 36px;
+}
+
+#ok_SearchResultContainer .yui3-widget-bd,#AnswerViewContainer .yui3-widget-bd,#CaseDeflectionPanelContainer .yui3-widget-bd
+{
+    width: auto;
+    overflow: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 10px;
+}
+
+#CaseDeflectionPanelContainer .yui3-widget-bd
+{
+    background: #F2F2F2;
+    width: auto;
+    margin: 0;
+}
+
+#ok_SearchResultContainer .yui3-button-close,#AnswerViewContainer .yui3-button-close
+{
+    cursor: pointer;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 25px;
+}
+
+#CaseDeflectionPanelContainer .yui3-button-close {
+    display: none;
+}
+
+#ok_SearchResultContent .yui3-oracleknowledge-facettree {
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.facetsCollapsed {
+    display: none !important;
+}
+
+#ok_SearchResultContent .yui3-oracleknowledge-facettree-content {
+    background: #FFFFFF;
+}
+
+#ok_SearchResultContent .yui3-oracleknowledge-resultwidget {
+    padding-right: 5px;
+}
+
+#ok_SearchResultContent .yui3-oracleknowledge-facettree-facetsTitle {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#CaseDeflectionAnswerViewContainer {
+    float: right;
+}
+/*  RESULT WIDGET  */
+.yui3-oracleknowledge-resultwidget-resultTitle {
+    font-size: 1.333em;
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+    border-bottom: 1px solid #CCC;
+    font-weight: normal;
+    padding: 4px;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+    text-align: center;
+}
+
+.yui3-oracleknowledge-resultwidget-resultsDiv {
+    border: 1px solid #BEBEBE;
+}
+
+.yui3-oracleknowledge-resultwidget-content table {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.yui3-oracleknowledge-resultwidget-excerptImg {
+    cursor: pointer;
+}
+
+.snippetClass0 {
+    color: #666666;
+}
+
+.snippetClass1 {
+    background-color: #EBEFF5;
+    color: #000000;
+}
+
+.snippetClass3 {
+    background-color: #EBEFF5;
+    color: #000000;
+    font-weight: bold;
+}
+
+.yui3-oracleknowledge-resultwidget-resultRowEven {
+    background-color: white;
+}
+
+.yui3-oracleknowledge-resultwidget-resultRowOdd {
+    background-color: #F7F7F7;
+}
+
+.yui3-oracleknowledge-resultwidget-content-noResult {
+    margin-left: 40px;
+}
+
+.yui3-oracleknowledge-resultwidget-im-paginationtop {
+    display: none;
+}
+
+.yui3-oracleknowledge-resultwidget-im-paginationbottom {
+    font-weight: bold;
+    border: 1px solid #CCCCCC;
+    border-top: none;
+    padding: 5px;
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+    text-align: right;
+    color: #464646;
+}
+
+.yui3-oracleknowledge-resultwidget-resultsTD {
+    border: 1px solid #CCCCCC;
+    padding: 0px;
+}
+
+.yui3-oracleknowledge-resultwidget-resultsTD td {
+    padding: 5px;
+}
+
+.yui3-oracleknowledge-resultwidget-titleAnswer {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.yui3-oracleknowledge-resultwidget-titleSource {
+    border-bottom: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.yui3-oracleknowledge-resultwidget-titleScore {
+    border-bottom: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.yui3-oracleknowledge-resultwidget-answer {
+    width: auto;
+    padding: 12px !important;
+}
+
+.yui3-oracleknowledge-resultwidget-source {
+    font-size: 13px;
+    width: 15%;
+}
+
+.yui3-oracleknowledge-resultwidget-score {
+    font-size: 13px;
+    width: 15%;
+}
+
+.yui3-oracleknowledge-resultwidget-selectedResult {
+    background: #DAE4F2 !important;
+}
+
+.yui3-oracleknowledge-resultwidget-selectedResult a {
+    color: #000 !important;
+    font-weight: bold;
+}
+/*  ANSWER LIST WIDGET */
+.yui3-oracleknowledge-answerlist-content table {
+    border-spacing: 0;
+}
+
+.yui3-oracleknowledge-answerlist-content p {
+    line-height: 1.25em;
+    margin-bottom: 0;
+}
+
+.yui3-oracleknowledge-answerlist-commonAnswerListBlock,.yui3-oracleknowledge-answerlist-recentAnswerListBlock,.yui3-oracleknowledge-answerlist-popularAnswerListBlock
+{
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left : 0;
+}
+
+.yui3-oracleknowledge-answerlist-recentAnswerListHeader,.yui3-oracleknowledge-answerlist-popularAnswerListHeader,.yui3-oracleknowledge-answerlist-commonAnswerListHeader
+{
+    font-size: 1.333em;
+    line-height: 1.4em;
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+    border-bottom: 1px solid #CCC;
+    font-weight: normal;
+    margin-bottom: 8px;
+    padding: 4px;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleID4Col,.yui3-oracleknowledge-answerlist-answerTitleTitle4Col,.yui3-oracleknowledge-answerlist-answerTitleViews4Col,.yui3-oracleknowledge-answerlist-answerTitlePosted4Col,.yui3-oracleknowledge-answerlist-answerLink4Col1,.yui3-oracleknowledge-answerlist-answerLink4Col2,.yui3-oracleknowledge-answerlist-answerLink4Col3,.yui3-oracleknowledge-answerlist-answerLink4Col4
+{
+    width: 25%;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleID2Col,.yui3-oracleknowledge-answerlist-answerLink2Col1
+{
+    width: 20%;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleTitle2Col,.yui3-oracleknowledge-answerlist-answerLink2Col2
+{
+    width: 80%;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleID4Col,.yui3-oracleknowledge-answerlist-answerTitleViews4Col,.yui3-oracleknowledge-answerlist-answerTitlePosted4Col,.yui3-oracleknowledge-answerlist-answerLink4Col1,.yui3-oracleknowledge-answerlist-answerLink4Col3,.yui3-oracleknowledge-answerlist-answerLink4Col4
+{
+    width: 15%;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleTitle4Col,.yui3-oracleknowledge-answerlist-answerLink4Col2
+{
+    width: 48%;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleID2Col,.yui3-oracleknowledge-answerlist-answerTitleTitle2Col,.yui3-oracleknowledge-answerlist-answerTitleID4Col,.yui3-oracleknowledge-answerlist-answerTitleTitle4Col,.yui3-oracleknowledge-answerlist-answerTitleViews4Col,.yui3-oracleknowledge-answerlist-answerTitlePosted4Col
+{
+    font-weight: bold;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleID2Col,.yui3-oracleknowledge-answerlist-answerTitleID4Col,.yui3-oracleknowledge-answerlist-answerTitleTitle4Col,.yui3-oracleknowledge-answerlist-answerTitleViews4Col
+{
+    border-right: none;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleTitle2Col,.yui3-oracleknowledge-answerlist-answerTitleTitle4Col,.yui3-oracleknowledge-answerlist-answerTitleViews4Col,.yui3-oracleknowledge-answerlist-answerTitlePosted4Col
+{
+    border-left: 1px solid #BEBEBE;
+}
+
+.yui3-oracleknowledge-answerlist-answerLink2Col2,.yui3-oracleknowledge-answerlist-answerLink4Col2,.yui3-oracleknowledge-answerlist-answerLink4Col3,.yui3-oracleknowledge-answerlist-answerLink4Col4
+{
+    border-left: 1px solid #BEBEBE;
+}
+
+.yui3-oracleknowledge-answerlist-recentAnswerListBody,.yui3-oracleknowledge-answerlist-popularAnswerListBody,.yui3-oracleknowledge-answerlist-commonAnswerListBody
+{
+    padding: 0px;
+}
+
+.yui3-oracleknowledge-answerlist-recentAnswerListBody td,.yui3-oracleknowledge-answerlist-popularAnswerListBody td,.yui3-oracleknowledge-answerlist-commonAnswerListBody td
+{
+    padding: 8px;
+}
+
+.yui3-oracleknowledge-answerlist-paginationtop, .yui3-oracleknowledge-answerlist-paginationbottom, .yui3-oracleknowledge-answerlist-filter {
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid #BEBEBE;
+    padding: 5px;
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+}
+
+.yui3-oracleknowledge-answerlist-filter {
+    text-align: right;
+}
+
+.yui3-oracleknowledge-answerlist-filter label {
+    margin-right: 3px;
+}
+
+.yui3-oracleknowledge-answerlist-filter select {
+    font-weight: normal;
+}
+
+.yui3-oracleknowledge-answerlist-answerListPaginationActive,.yui3-oracleknowledge-answerlist-answerListPaginationInactive
+{
+    margin: 0 3px;
+}
+
+.yui3-oracleknowledge-answerlist-content ul {
+    padding: 5px;
+}
+
+.yui3-oracleknowledge-answerlist-content ul li {
+    list-style-type: none;
+}
+
+.yui3-oracleknowledge-answerlist-content table {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.yui3-oracleknowledge-answerlist-descending,.yui3-oracleknowledge-answerlist-ascending
+{
+    margin-left: 5px;
+}
+
+.yui3-oracleknowledge-answerlist-answerListNoResult {
+    background-color: #F2F2F2;
+    padding: 10px;
+}
+/*  FACET WIDGET  */
+.yui3-oracleknowledge-facettree {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.yui3-oracleknowledge-facettree-content ul li {
+    list-style-type: none;
+}
+
+.yui3-oracleknowledge-facettree-content ul {
+    -webkit-padding-start: 0px;
+    padding: 5px;
+}
+
+.yui3-oracleknowledge-facettree-clearFacets {
+    float: right;
+    color: #464646;
+}
+
+.yui3-oracleknowledge-facettree-clearFacets:hover {
+    cursor: pointer;
+    color: #3C0D68;
+    text-decoration: underline;
+}
+
+.yui3-oracleknowledge-facettree-facetsList {
+    border: 1px solid #CCCCCC;
+    padding: 0px 10px;
+}
+
+.yui3-oracleknowledge-facettree-facetsTitle {
+    font-size: 1.333em;
+    line-height: 1.4em;
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+    font-weight: normal;
+    padding: 4px;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+}
+
+.yui3-oracleknowledge-facettree-facetLink {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: lighter;
+    display: block;
+    -webkit-padding-start: 10px;
+    padding: 4px;
+}
+
+.yui3-oracleknowledge-facettree-facetLink:hover {
+    color: #3C0D68;
+    text-decoration: underline;
+}
+
+.yui3-oracleknowledge-facettree-active {
+    background: url(../themes/standard/images/remove.png) right
+        no-repeat #EBEFF5;
+    border: 1px solid #CCC;
+}
+/*  CATEGORY WIDGET  */
+.yui3-oracleknowledge-categoryexplorer-titleDiv {
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid #BEBEBE;
+    padding: 5px;
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+}
+
+.yui3-oracleknowledge-categoryexplorer-contentDiv {
+    padding: 12px;
+}
+
+.yui3-oracleknowledge-categoryexplorer-contentDiv ul {
+    list-style: none;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleSort,.yui3-oracleknowledge-answerlist-answerTitleSort span
+{
+    color: #464646;
+    text-decoration: none;
+}
+
+.yui3-oracleknowledge-answerlist-answerTitleSort:hover {
+    text: decoration :     underline;
+}
+
+.yui3-oracleknowledge-categoryexplorer-listHidden {
+    display: none;
+}
+
+.yui3-oracleknowledge-categoryexplorer-expanded {
+    background-image:
+        url(../images/oracleKnowledge/expand_collapse_minus.gif);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position-y: 5px;
+    cursor: pointer;
+}
+
+.yui3-oracleknowledge-categoryexplorer-expandedHidden {
+    display: none;
+}
+
+.yui3-oracleknowledge-categoryexplorer-collapsed {
+    background-image:
+        url(../images/oracleKnowledge/expand_collapse_plus.gif);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position-y: 5px;
+    cursor: pointer;
+}
+
+.yui3-oracleknowledge-categoryexplorer-collapsedHidden {
+    display: inline-block;
+    visibility: hidden;
+    width: 16px;
+}
+
+.yui3-oracleknowledge-categoryexplorer-linkSelected {
+    background: url(../themes/standard/images/remove.png) right
+        no-repeat #EBEFF5;
+    border: 1px solid #CCCCCC;
+    padding-top: 4px;
+    padding-right: 30px;
+    padding-bottom: 4px;
+    padding-left : 4px;
+    line-height: 30px;
+}
+
+.yui3-oracleknowledge-categoryexplorer-item ul {
+    padding-left: 17px;
+}
+
+a.yui3-oracleknowledge-categoryexplorer-link {
+    line-height: 30px;
+}
+/*  CHANNEL WIDGET  */
+.yui3-oracleknowledge-channelwidget-channelDiv ul {
+    list-style-type: none;
+}
+
+.yui3-oracleknowledge-channelwidget-channel {
+    border-right: 1px solid #BEBEBE;
+    display: inline-block;
+    padding: 2px 20px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.yui3-oracleknowledge-channelwidget-channel:hover {
+    text-decoration: underline;
+}
+
+.yui3-oracleknowledge-channelwidget-channelSelected {
+    border-right: 1px solid #BEBEBE;
+    display: inline-block;
+    padding: 2px 20px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.yui3-oracleknowledge-channelwidget-channel:last-child,.yui3-oracleknowledge-channelwidget-channelSelected:last-child
+{
+    border-right: none;
+}
+/* CASE DEFLECTION WIDGET  */
+.yui3-oracleknowledge-casedeflection-topDiv {
+    display: none;
+    width: 700px;
+}
+
+.yui3-oracleknowledge-casedeflection-closeLink {
+    position: absolute;
+    right:10px;
+}
+
+.yui3-oracleknowledge-casedeflection-centerDiv {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.yui3-oracleknowledge-casedeflection-clearDiv {
+    clear: both;
+}
+
+.yui3-oracleknowledge-casedeflection-caseMessageDiv {
+    background: url("../themes/standard/images/layout/info.png") no-repeat
+        scroll 0 0 #FFFFE0;
+    border: 1px solid #808080;
+    color: #990000;
+    font-size: 1.333em;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin: 10px 0;
+    padding-top: 6px !important;
+    padding-right: 6px !important;
+    padding-bottom: 4px !important;
+    padding-left : 40px !important;
+}
+
+.yui3-oracleknowledge-casedeflection-centerTitleDiv {
+    font-weight: bold;
+    color: #000000;
+}
+
+.yui3-oracleknowledge-casedeflection-answerListDiv {
+    margin-top: 25px;
+}
+
+.yui3-oracleknowledge-casedeflection-bottomDiv {
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left : 10px;
+    text-align: right;
+}
+
+.yui3-oracleknowledge-casedeflection-questionDiv {
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+    border: 1px solid #CCCCCC;
+    margin: 15px 0 10px;
+    padding: 5px 20px 15px;
+}
+
+.yui3-oracleknowledge-casedeflection-editQuestionButton {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #0000CC;
+    text-decoration: underline;
+    text-shadow: none;
+    font-weight: normal;
+    margin-right: 0;
+}
+
+.yui3-oracleknowledge-casedeflection-disabledLink {
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #888888 !important;
+    text-decoration: underline !important;
+    text-shadow: none !important;
+    font-weight: normal !important;
+    margin-right: 0 !important;
+}
+
+.yui3-oracleknowledge-casedeflection-resultsDivDeflectionNarrow {
+    float: left;
+    position: absolute;
+    width: 25%;
+}
+
+.yui3-oracleknowledge-casedeflection-answerViewDiv {
+    float: right;
+    position: relative;
+    width: 75%;
+    background: #DAE4F2;
+    box-shadow: 5px 0 5px 1px #AAAAAA;
+    min-height: 660px;
+}
+/*  SEARCH WIDGET DEFLECTION                         */
+.yui3-oracleknowledge-searchwidgetDeflection {
+    width: 80%;
+    float:left;
+}
+
+.yui3-oracleknowledge-searchwidgetDeflection a {
+    color: black;
+    text-decoration: none;
+}
+
+.yui3-oracleknowledge-searchwidgetDeflection a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.yui3-oracleknowledge-searchwidgetDeflection fieldset {
+    border: none;
+}
+
+.yui3-oracleknowledge-searchwidget-searchFormDeflection fieldset {
+    padding: 0;
+}
+
+.yui3-oracleknowledge-searchwidget-inputBoxDeflection {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.yui3-oracleknowledge-searchwidget-submitButtonDeflection {
+    display: inline-block;
+}
+
+.yui3-oracleknowledge-searchwidget-upperDivDeflection {
+    margin-top: 10px;
+}
+
+.yui3-oracleknowledge-searchwidget-lowerDivDeflection {
+    display: none;
+}
+
+.yui3-oracleknowledge-searchwidget-searchFieldDeflection {
+    width: 390px;
+}
+
+.locale_selectionDeflection {
+    display: inline-block;
+    margin-right: 20px;
+    color: #7F7F7F;
+}
+
+.yui3-oracleknowledge-searchwidgetDeflection a {
+    text-decoration: none;
+}
+
+.yui3-oracleknowledge-searchwidget-languangesLinkDeflection {
+    display: block;
+}
+
+.yui3-oracleknowledge-searchwidget-startOverLinkDivDeflection {
+    display: none;
+}
+
+.yui3-oracleknowledge-searchwidget-hideSearchTipsDeflection {
+    background-color: #F9F9FC;
+    border: 1px solid #CCC;
+    color: #AAA;
+    display: block;
+    font-weight: bold;
+    height: 18px;
+    margin: 4px;
+    padding: 0;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    text-decoration: none;
+    top: 1px;
+    width: 17px;
+}
+
+.yui3-widget-bdDeflection p {
+    padding: 0 10px;
+}
+
+.yui3-widget-bdDeflection ul li {
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+/*  RESULT WIDGET DEFLECTION                         */
+#ok_ResultWidgetContainer {
+    width: 70%;
+    display: inline-block;
+    margin-right: -5px;
+}
+
+.yui3-oracleknowledge-resultwidget a {
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.yui3-oracleknowledge-resultwidget p {
+    word-break: break-all;
+}
+
+.yui3-oracleknowledge-resultwidget span {
+    word-break: break-all;
+}
+
+.yui3-oracleknowledge-resultwidget a:hover {
+    text-decoration: underline;
+}
+
+.yui3-oracleknowledge-resultwidget-contentDeflection table {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.yui3-oracleknowledge-resultwidget-resultTitleDeflection {
+    display: none;
+}
+
+.yui3-oracleknowledge-resultwidget-documentTitleDeflection {
+    margin: 0;
+}
+
+.yui3-oracleknowledge-resultwidget-resultsDivDeflection {
+    border: 1px solid #BEBEBE;
+}
+
+.yui3-oracleknowledge-resultwidget-contentDeflection ul {
+    padding: 0;
+    margin: 0;
+}
+
+.yui3-oracleknowledge-resultwidget-contentDeflection li {
+    padding: 5px;
+}
+
+.yui3-oracleknowledge-resultwidget-contentDeflection ul li {
+    list-style-type: none;
+}
+
+.yui3-oracleknowledge-resultwidget-excerptDeflection {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.yui3-oracleknowledge-resultwidget-excerptImgDeflection {
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+.snippetClass0Deflection {
+    color: #7F7F7F;
+}
+
+.snippetClass1Deflection {
+    background-color: #DDD;
+    color: #000000;
+}
+
+.snippetClass3Deflection {
+    background-color: #DDD;
+    color: #000000;
+    font-weight: bold;
+}
+
+.yui3-oracleknowledge-resultwidget-resultRowEvenDeflection {
+    background-color: white;
+}
+
+.yui3-oracleknowledge-resultwidget-resultRowOddDeflection {
+    background-color: #F7F7F7;
+}
+
+.yui3-oracleknowledge-resultwidget-content-noResultDeflection {
+    margin-left:40px;
+}
+
+.yui3-oracleknowledge-resultwidget-im-paginationtopDeflection {
+    display: none;
+}
+
+.yui3-oracleknowledge-resultwidget-im-paginationbottomDeflection {
+    font-weight: bold;
+    border: 1px solid #CCCCCC;
+    border-top: none;
+    padding: 5px;
+    background: #EBEFF5
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVQIHWP4DwABAQEANl9ngAAAAABJRU5ErkJggg==)
+        repeat-x scroll 0 0;
+    *background: #EBEFF5; /* IE6/7 don't support data URI */
+    text-align: right;
+    color: #464646;
+}
+
+.yui3-oracleknowledge-resultwidget-resultsTDDeflection {
+    border: 1px solid #CCCCCC;
+    padding: 0px;
+}
+
+.yui3-oracleknowledge-resultwidget-resultsTDDeflection td {
+    padding: 5px;
+}
+
+.yui3-oracleknowledge-resultwidget-titleAnswerDeflection {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.yui3-oracleknowledge-resultwidget-titleSourceDeflection {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.yui3-oracleknowledge-resultwidget-titleScoreDeflection {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.yui3-oracleknowledge-resultwidget-answerDeflection {
+    width: auto;
+}
+
+.yui3-oracleknowledge-resultwidget-sourceDeflection {
+    width: 15%;
+}
+
+.yui3-oracleknowledge-resultwidget-scoreDeflection {
+    font-size: 13px;
+    width: 15%;
+}
+/*  ANSWER VIEW WIDGET  */
+.yui3-oracleknowledge-answerview-answerFrame {
+    height: 600px;
+    width: 96%;
+    margin-top: 15px;
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.yui3-oracleknowledge-answerview-closeButton {
+    float: right;
+}
+
+.yui3-oracleknowledge-answerview-closeButtonContainer {
+    position: absolute;
+    margin: 0;
+    top: 5px;
+    right: 5px;
+}
+
+#AnswerViewContainer .yui3-oracleknowledge-answerview-closeButtonContainer {
+    display: none;
+}
+#ok_SimpleSearchAnswerViewContainer .yui3-oracleknowledge-answerview-closeButton {
+    float: right;
+}
+#ok_SimpleSearchAnswerViewContainer .yui3-oracleknowledge-answerview-closeButtonContainer {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+#ok_SimpleSearchAnswerViewContainer .yui3-oracleknowledge-answerview-answerFrame {
+    width: 96%;
+    *width: 90%;
+    margin-top: 45px;
+}
+
+#ok_SimpleSearchAnswerViewContainer .yui3-oracleknowledge-answerview-iFrameContainerDeflection
+{
+    background: #DAE4F2;
+}
+
+#ok_SimpleSearchAnswerViewContainer .yui3-oracleknowledge-answerview-iFrameParentDeflection
+{
+    background: #DAE4F2;
+}
+/*  ANSWER VIEW WIDGET DEFLECTION   */
+.yui3-oracleknowledge-answerview-answerFrameDeflection {
+    height: 600px;
+    width: 96%;
+    *width: 90%;
+    margin-top: 45px;
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.yui3-oracleknowledge-answerview-closeButtonDeflection{
+    float: right;
+}
+
+.yui3-oracleknowledge-answerview-closeButtonContainerDeflection{
+    position: absolute;
+    margin: 0;
+    top: 5px;
+    right: 5px;
+}
+
+.yui3-oracleknowledge-answerview-iFrameContainerDeflection {
+    background: #DAE4F2;
+}
+
+.yui3-oracleknowledge-answerview-iFrameParentDeflection {
+    background: #DAE4F2;
+}
+#CaseDeflectionContainer .yui3-oracleknowledge-answerview-closeButtonDeflection {
+    float: right;
+}
+#CaseDeflectionContainer .yui3-oracleknowledge-answerview-closeButtonContainerDeflection {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}

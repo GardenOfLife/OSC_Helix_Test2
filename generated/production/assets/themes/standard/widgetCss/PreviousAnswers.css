@@ -1,0 +1,13 @@
+.rn_PreviousAnswers {
+  padding: 10px 0; }
+
+.rn_PreviousAnswers h2 {
+  margin-bottom: 10px;
+  padding-bottom: 2px; 
+  border-bottom: 1px solid #4e4e4e;
+  font-family: "DepotNew-Bd";
+  font-size: 25px;}
+
+@media print {
+  .rn_PreviousAnswers {
+    display: none; } }

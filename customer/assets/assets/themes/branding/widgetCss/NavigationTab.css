@@ -1,0 +1,66 @@
+.rn_NavigationTab a {
+    
+    
+    color:#fff;
+    text-decoration:none;
+
+}
+.rn_NavigationTab a:hover,
+.rn_NavigationTab a:focus {
+    border-bottom:3px solid #17d7d0;
+    color: #fff;
+	
+}
+.rn_NavigationTab a:focus {
+    
+	
+}
+.rn_NavigationTab a.rn_SelectedTab,
+.rn_NavigationTab a.rn_SelectedTab em {
+    border-bottom:3px solid #17d7d0;
+    color:#fff;
+}
+
+/* Sub navigation */
+.rn_NavigationTab a em {
+    font-size:8px;
+    border:1px solid #E2E2E2;
+    border-right-color:#CFCFCF;
+    border-left-color:#CFCFCF;
+    border-bottom-color:#C1C1C1;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    color:#000;
+    height:15px;
+    padding-left: 4px;
+    width:12px;
+}
+.rn_NavigationTab a:hover em,
+.rn_NavigationTab a:focus em {
+   
+}
+.rn_NavigationTab .rn_SubNavigation {
+   background:#fff;
+    border:1px solid #CCC;
+    padding:10px 0 0;
+    top:100px;
+}
+.rn_NavigationTab .rn_SubNavigation a {
+   
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    border:none;
+    color:#404040;
+    /*IE6 min-height*/
+    height:auto !important;
+    height:23px;
+    margin-bottom:1px;
+    min-height:23px;
+    text-transform:none;
+}
+.rn_NavigationTab .rn_SubNavigation a:hover {
+    background:#EEE;
+}
+.rn_NavigationTab .rn_SubNavigation a:focus {
+    outline:thin dotted #777;
+}

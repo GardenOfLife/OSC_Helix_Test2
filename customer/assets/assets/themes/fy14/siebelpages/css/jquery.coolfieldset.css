@@ -1,0 +1,24 @@
+.coolfieldset, .coolfieldset.expanded{
+	border: 0;
+	margin: 10px 0;
+	padding-left: 0;
+}
+
+.coolfieldset.collapsed{
+	border:0;	
+}
+
+.coolfieldset legend{
+	font-size: 12px;
+	padding-left:13px;
+	font-weight:bold;
+	cursor:pointer;	
+}
+
+.coolfieldset legend, .coolfieldset.expanded legend{
+	background: transparent url(expanded.gif) no-repeat center left;
+}
+
+.coolfieldset.collapsed legend{
+	background: transparent url(collapsed.gif) no-repeat center left;
+}

@@ -1,0 +1,27 @@
+version: "1.0"
+requires:
+  jsModule:
+  - standard
+  - mobile
+attributes:
+  channels:
+    name: channels
+    type: multioption
+    description: The channels to display, in the desired order.
+    options:
+    - question
+    - community
+    - chat
+    - feedback
+    - phone
+    default:
+    - question
+    - community
+    - chat
+    - feedback
+    required: true
+extends:
+  widget: standard/utils/ContactUs
+  components:
+  - view
+  - css

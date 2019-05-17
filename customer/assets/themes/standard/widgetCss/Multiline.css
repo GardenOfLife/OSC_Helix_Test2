@@ -1,0 +1,28 @@
+.rn_Multiline {
+	overflow: hidden; }
+.rn_Multiline .rn_Loading {
+	font-size: 2.5em;
+	line-height: 2em;
+	text-align: center; }
+.rn_Multiline .rn_Element1, .rn_Multiline .rn_Element1 h3 a  {
+	font-size: 25px;
+	font-family: "DepotNew-Bd"; }
+.rn_Multiline .rn_Element2 {
+	font-size: 1.333em;
+	display:none; /* Hide the updated label */ }
+.rn_Multiline .rn_Element3 {
+	display: block;
+	font-size: 18px;
+	font-family: "DepotNew-Bd";
+	line-height: 1.3em; 
+	color: #4e4e4e;}
+.rn_Multiline .rn_ElementsHeader, .rn_Multiline .rn_ElementsData {
+	color: #4e4e4e;
+	font-size: 18px; }
+.rn_Multiline .rn_Highlight {
+	font-style: normal;
+	font-weight: bold; }
+.rn_Multiline ol, .rn_Multiline ul {
+	padding-top: 0.3em; }
+.rn_Multiline ol li, .rn_Multiline ul li {
+	margin-bottom: 1em; }

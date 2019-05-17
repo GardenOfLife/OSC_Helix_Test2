@@ -1,0 +1,198 @@
+@import 'widget-includes';
+
+.rn_SocialUserAvatar {
+    @include row;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .rn_PreviewImage {
+        @include media ($large-screen) {
+            @include shift(1);
+            @include span-columns(2);
+
+        }
+
+        img {
+            width: 96px;
+            position: absolute;
+            top: 0;
+        }
+
+        .rn_Refresh {
+            @include icon($fa-var-refresh, before);
+            margin-top: 0.4em;
+            margin-right: 0.5em;
+            color: #3b6db1;
+        }
+    }
+
+    .rn_Loading::before {
+        display: inline;
+    }
+
+    .rn_AvatarOptions {
+        @include media ($large-screen) {
+            @include span-columns(9);
+            @include omega;
+        }
+
+        .rn_AvatarOption {
+            @include row;
+            padding: 1em .5em;
+            border-bottom: 1px dotted $medium-gray;
+
+            label {
+                display: block;
+                font-size: larger;
+                margin: .4em 0;
+            }
+
+            &.rn_Gravatar label {
+                background: url('#{$theme-images}/gravatar.png') 0 0 no-repeat no-repeat;
+                padding-left: 28px;
+                min-height: 16px;
+            }
+
+            &.rn_ChosenAvatar {
+                background: $light-gray;
+            }
+
+            button {
+                margin: .4em 0;
+            }
+
+            .rn_Success {
+                color: #008000;
+            }
+
+            .rn_Error {
+                color: #F00;
+            }
+
+            .rn_StatusIcon {
+                margin-top: .6em;
+                display: inline;
+
+                &.rn_Permanent i {
+                    display: none;
+                }
+            }
+
+            .rn_HintText {
+                color: $dark-gray;
+                display: block;
+                font-size: smaller;
+                font-style: normal;
+                font-weight: bold;
+            }
+        }
+
+        .rn_CurrentSocialAvatar {
+            font-style: italic;
+        }
+
+        .rn_AvatarLibraryForm {
+            .rn_LoadingIcon {
+                text-align: center;
+                padding: 3em;
+
+                img {
+                    width: 100px;
+                }
+            }
+
+            .rn_ClickToChooseText {
+                @include span-columns(11);
+                margin-bottom: 1em;
+                margin-top: 1em;
+                font-weight: bold;
+            }
+
+            .rn_CloseGallery {
+                @include span-columns(1);
+                @include icon($fa-var-close);
+                text-align: right;
+                margin-right: 0;
+                color: black;
+                padding: 10px;
+            }
+
+            .rn_ProfilePictures {
+                display : inline-block;
+
+                div {
+                    padding: 1em;
+                    display: inline-block;
+
+                    img {
+                        padding: 2px;
+                        border-style: groove;
+
+                        &.rn_Clicked {
+                            border-color: green;
+                            border-style: solid;
+                            border-width: thick;
+                        }
+                    }
+                }
+            }
+
+            .rn_ImagePaginator {
+                text-align: center;
+                padding-top: 2em;
+
+                a {
+                    color: black;
+                    padding: 8px 16px;
+                    border: 1px solid gray;
+                }
+
+                .rn_CurrentPages a {
+                    &.rn_Selected {
+                        background-color: lighten($base-accent-color, 1);;
+                        color: white;
+                        border: 1px solid lighten($base-accent-color, 1);;
+                    }
+
+                    &:hover:not(.rn_Selected) {
+                        background-color: lightgrey;
+                    }
+                }
+            }
+        }
+    }
+
+    .rn_NoSocialUser {
+        padding: 4px 0 4px 40px;
+        font-size: 1.2em;
+        font-style: italic;
+    }
+}
+
+.rn_SocialUserAvatarDialog {
+    .rn_DialogNote {
+        @include span-columns(7);
+
+        .rn_DialogNoteLabel {
+            font-weight: bold;
+        }
+    }
+
+    .rn_DialogAvatarImages {
+        @include span-columns(5);
+
+        img {
+            float: right;
+        }
+
+        .rn_UserAvatar {
+            text-align: center;
+
+            &:last-child {
+                margin-top: 1em;
+            }
+        }
+    }
+}

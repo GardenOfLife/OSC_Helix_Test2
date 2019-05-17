@@ -1,0 +1,12 @@
+version: "1.0"
+requires:
+  jsModule:
+  - standard
+  - mobile
+info:
+  description: Dynamic show/hide validation field
+extends:
+  widget: standard/input/TextInput
+  components:
+  - js
+  - css

@@ -1,0 +1,57 @@
+
+@import url("http://www.golfsmith.com/css/old_css/main_classes.css");
+/* This is the original css file used on the old site (minus invodo and video contest css) */
+
+
+@import url("http://www.golfsmith.com/css/global.css?version=072610");
+/* All CSS controlling site-wide elements */
+
+@import url("http://www.golfsmith.com/css/color.css?version=062810");
+/* All CSS controlled site coloration is found within this file. COLORATION CSS ONLY (color, background, border-color). */
+
+
+@import url("http://www.golfsmith.com/css/table.css?version=100710");
+/* All CSS controlling tables and table elements, including Classes and ID's. */
+
+@import url("http://www.golfsmith.com/css/classes.css?version=111810");
+/* All CSS classes used across the site */
+
+@import url("http://www.golfsmith.com/css/php_productCalls.css?version=062810");
+/* All CSS used to style php generated product call-ins across the site */
+
+
+
+@import url("http://www.golfsmith.com/css/navigation.css?version=091610");
+/* All CSS producing the core navigation drop-downs or fly-outs should be included here. Basic 'a' link styling should be here too. */
+
+@import url("http://www.golfsmith.com/css/home_page.css?version=090210");
+/* All CSS producing the "Homepage" look and feel */
+
+@import url("http://www.golfsmith.com/css/search_results.css?version=062810");
+/* All CSS producing the "Search Result" page look and feel */
+
+@import url("http://www.golfsmith.com/css/category_page.css?version=110310");
+/* All CSS producing the "Category Page" look and feel */
+
+@import url("http://www.golfsmith.com/css/landing_pages.css?version=101910");
+/* All CSS producing the "Landing Page" look and feel */
+
+@import url("/euf/assets/css/product.css");
+/* All CSS producing the "Product Page" look and feel */
+
+@import url("http://www.golfsmith.com/css/brand_store.css?version=062810");
+/* All CSS producing the "Brand Store" page look and feel */
+
+@import url("http://www.golfsmith.com/css/error.css?version=062810");
+/* All CSS producing the "Error" page look and feel - 401 and 404 */
+
+@import url("http://www.golfsmith.com/css/footer.css?version=092410");
+/* -All CSS producing the footer of the site */
+
+@import url("http://www.golfsmith.com/css/new_shopping_cart.css?version=111810");
+/* -All CSS producing the shopping cart of the site */
+
+@import url("http://www.golfsmith.com/css/php_pages.css?version=062810");
+/* -All CSS producing the PHP Pages of the site */
+
+

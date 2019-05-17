@@ -1,0 +1,187 @@
+/*********************************************/
+/* 14. Custom declarations to fix behavior   */
+/*********************************************/
+#cart_media a {
+	font-size: 0.850em;	
+}
+#cart_pageTitle h1 {
+	font-size: 30px;	
+}
+#cart_pageTitle p {
+    color: #555555;
+	font-size: 0.9em;
+	margin-top: -5px;	
+}
+.item_headings h5 {
+    font-size: 1.250em;
+    padding: 0.7em 0 0.366667em;
+}
+.item_description h6 {
+	font-weight: normal;	
+	font-size: 1em;
+}
+.item_description p cite {
+	font-size: 0.8em;
+}
+.item_description p.delete_item {
+	font-size: 0.8em;
+	padding-top: 15px;	
+}
+.delivery_table td {
+	font-size: 0.6em;
+	padding: 6px;	
+}
+td.item_delivery {
+	color: #555;	
+	vertical-align: top;
+}
+td.item_delivery input {
+	float: left;
+	clear: none;
+}
+td.item_delivery label {
+	clear: none;	
+}
+td.item_delivery .ships_date {
+	font-size: 0.975em;	
+}
+td.item_price {
+	padding-top: 0px;
+	vertical-align: top;	
+}
+td.item_price h6 {
+	font-weight: normal;
+	font-size: 1.1em;	
+}
+td.item_qty {
+	padding-top: 0px;
+	vertical-align: top;	
+}
+td.item_qty input.cart_qty {
+	font-size: 0.8em;	
+}
+td.item_total {
+	padding-top: 0px;	
+	vertical-align: top;
+}
+td.item_total h6 {
+	font-weight: normal;
+	font-size: 1.1em;	
+}
+#footer_summary p {
+	font-size: 0.9em;	
+}
+#footer_summary label {
+	font-size: 0.7em;
+	color: #555;	
+}
+#footer_summary input {
+	font-size: 0.9em;	
+}
+#footer_summary #method_select {
+	font-size: 0.9em;	
+}
+#footer_summary h6 {
+	font-weight: normal;
+	font-size: 1em;	
+}
+#cart_promoCode h5 {
+	font-size: 1.2em;
+	font-weight: normal;	
+}
+#cart_promoCode h5 input#promoCode_input {
+	height: 23px;
+}
+#items_payment label {
+	font-size: 0.7em;
+}
+#shopping_cart2 {
+	padding-top: 30px;	
+	position: relative;
+}
+#main {
+	padding: 0px;
+	color: #333;	
+}
+#payment_cc h2 {
+	font-size: 1.8em;	
+}
+#payment_cc label, legend {
+    display: block;
+    font-family: Tahoma,Geneva,Arial,sans-serif;
+	color: #555;
+    letter-spacing: 0.02em;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+}
+#payment_cc .inline_label {
+	display: inline;	
+}
+#payment_save {
+	font-size: 0.9em;	
+}
+#items_giftCard h4 {
+	font-size: 1.4em;
+	padding:15px 0 5px 0;
+	font-weight: normal;
+}
+#items_giftCard p, cite {
+	font-size: 0.9em;
+	color: #555;
+}
+#items_giftCard label, legend {
+    display: block;
+    font-family: Tahoma,Geneva,Arial,sans-serif;
+	color: #555;
+    letter-spacing: 0.02em;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+	font-size: 0.7em;
+}
+#items_cashCard h4 {
+	font-size: 1.4em;
+	padding-top: 15px;
+	font-weight: normal;
+}
+#items_cashCard p, cite {
+	font-size: 0.875em;
+	color: #555;
+}
+#items_cashCard label, legend {
+    display: block;
+    font-family: Tahoma,Geneva,Arial,sans-serif;
+	color: #555;
+    letter-spacing: 0.02em;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+	font-size: 0.7em;
+}
+#payment_summary p {
+	font-size: 0.9em;	
+	color: #555;
+}
+#payment_summary h6 {
+	font-weight: normal;
+	font-size: 1.1em;	
+}
+#items_addresses h4 {
+	font-size: 1.450em;
+	padding: 5px 0px;
+	font-weight: normal;	
+}
+#items_addresses span {
+	font-size: 0.875em;
+	color: #555;
+}
+.cart_right {
+	vertical-align: top;	
+}
+#shipping_method {
+	font-size: 0.950em;	
+}
+#shipping_method #method_select {
+	font-size: 1em;	
+}
+#shipping_method cite {
+	font-size: 0.850em;	
+}

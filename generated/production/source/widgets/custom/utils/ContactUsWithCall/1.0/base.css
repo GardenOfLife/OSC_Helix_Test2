@@ -1,0 +1,60 @@
+.rn_ContactUsWithCall.rn_ContactUs fieldset {
+  background: #FFF; }
+.rn_ContactUsWithCall.rn_ContactUs legend {
+  display: block; }
+.rn_ContactUsWithCall.rn_ContactUs div:before {
+  color: #505050; }
+.rn_ContactUsWithCall.rn_ContactUs .rn_QuestionLink:before {
+  content: url('/euf/assets/themes/standard/images/envelopesmall.png');
+  margin-left: 3px;
+  margin-right: 8px; }
+.rn_ContactUsWithCall.rn_ContactUs .rn_CommunityLink:before {
+  font-family: 'FontAwesome';
+  margin-right: 6px;
+  content: "\f086";
+  margin-right: 3px;
+  font-size: 1em; }
+.rn_ContactUsWithCall.rn_ContactUs .rn_ChatLink a:before {
+  font-family: 'FontAwesome';
+  margin-right: 6px;
+  content: "\f0e5";
+  margin-right: 7px;
+  font-size: 1em; }
+.rn_ContactUsWithCall.rn_ContactUs  .rn_SiteFeedback:before {
+  content: url('/euf/assets/themes/standard/images/feedback.png');
+  margin-right: 9px;
+}
+.rn_ContactUsWithCall.rn_ContactUs .rn_SiteFeedback, .rn_ContactUsWithCall.rn_ContactUs .rn_ConditionalChatLink, .rn_ContactUsWithCall.rn_ContactUs .rn_Chat {
+  display: inline; }
+.rn_ContactUsWithCall.rn_ContactUs .rn_Chat span {
+  display: block; }
+.rn_ContactUsWithCall.rn_ContactUs .rn_CallusLink:before {
+  content: url('/euf/assets/themes/standard/images/phonesmall.png');
+  margin-right: 9px;
+}
+.rn_QuestionLink a, .rn_SiteFeedback a, .rn_CallusLink a  {
+    color: #4e4e4e !important;
+    font-size: 25px;
+    font-family: "CaeciliaLTStd-Heavy";
+    font-weight: bold;
+}
+.rn_30margintop {
+	margin-top: 30px !important;
+}
+.rn_QuestionDescription, .rn_CallusDescription, .rn_FeedbackDescription {
+	font-size: 18px;
+}
+.rn_ContactUsWithCall.rn_ContactUs .rn_Well h2 {
+    border-bottom: 1px solid #c6c6c6;
+    padding: 0 0 0 0;
+    padding-bottom: 20px;
+    margin: 0 0 30px 0;
+    font-size: 25px;
+    font-family: "DepotNew-Bd";
+    color: #4e4e4e;
+}
+.rn_ContactUsWithCall.rn_ContactUs .rn_Well {
+    padding: 20px 30px 60px 30px;
+    background-color: #e5e5e5;
+}
+.rn_ContactUsWithCall.rn_ContactUs .rn_Well h2{border-bottom: 1px solid #c6c6c6;padding: 0 30px 18px 30px;margin: 0 -30px 30px -30px;font-size: 25px;font-family: "DepotNew-Bd";color: #4e4e4e;}

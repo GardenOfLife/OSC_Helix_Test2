@@ -1,0 +1,16 @@
+.sign-on-container h2 {margin-left:-7px;}
+.order-status-container h3 {margin-left:138px;}
+#header-bar .sign-on-container {left:-20px;}
+#header-bar .order-status-container {left:-171px;}
+.sign-on-container form .label .requiredindicator,
+.order-status-container form .label .requiredindicator {padding-left:0;}
+.breadcrumb ul li {padding-bottom:2px;}
+.requiredindicator {left:0;margin-right:0;}
+.new-account-information .row-container {margin-bottom:10px;}
+.new-account-information .input input[type='text'] {top:0;right:-1px;}
+.new-account-information .full-field input[type='checkbox'] {left:-3px;}
+.wishlist_landing .find-a-wishlist h2 {letter-spacing:0;font-size:1.1em;} 
+.wishlist_landing .find-a-wishlist h2 .cufon{top:2px;}
+.navigation-container .top-cat .cufon {top:1px;}
+.find-a-store {background-image:none;}
+/*.sign-on-container form .label, .order-status-container form .label {left:0;padding-left:9px;padding-right:3px;background-color:#fff;}*/

@@ -1,0 +1,59 @@
+.rn_UserStatus{padding-left: 4px;font-size: 0.8em;font-style: italic;text-shadow: 1px 1px #000;}
+.rn_ModerationInlineAction .rn_ActionMenu{display: inline;}
+.rn_ModerationInlineAction .rn_ActionMenu a:after{font-family: 'FontAwesome';margin-left: 6px;content: "\f078";}
+.rn_ModerationInlineAction .rn_Loading{display: inline-block;}
+.rn_ModerationInlineAction .rn_Loading:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f110";-webkit-animation: fa-spin 2s infinite linear;-moz-animation: fa-spin 2s infinite linear;animation: fa-spin 2s infinite linear;display: block;font-size: 1em;position: relative;text-align: center;}
+.rn_ModerationInlineAction .yui3-panel-content .yui3-widget-bd{padding: 0;min-height: 100%;}
+.rn_ModerationInlineAction .rn_Dropdown.yui3-panel-content.yui3-widget-stdmod{border: 1px solid #c4c4c4;box-shadow: 0 0 2px rgba(88, 88, 162, 0.3);border-radius: 3px;min-width: 139px;word-wrap: break-word;overflow: hidden;}
+.rn_ModerationInlineAction .rn_Dropdown.yui3-panel-content.yui3-widget-stdmod ul{padding: 0;}
+.rn_ModerationInlineAction .rn_Dropdown.yui3-panel-content.yui3-widget-stdmod li{border: 0;list-style: none;margin: 0;text-align: left;}
+.rn_ModerationInlineAction .rn_Dropdown.yui3-panel-content.yui3-widget-stdmod a{background: #FFF;display: block;padding: 4px;}
+.rn_ModerationInlineAction .rn_Dropdown.yui3-panel-content.yui3-widget-stdmod a:hover, .rn_ModerationInlineAction .rn_Dropdown.yui3-panel-content.yui3-widget-stdmod a:focus{background: #e8f2f9;}
+.rn_UserActivity{margin-bottom: 1.5em;}
+.rn_UserActivity h2{font-size: 1.75em;margin-bottom: 1em;}
+.rn_UserActivity .rn_ActivityTitleLabel{position: relative;left: -3.25em;}
+.rn_UserActivity .rn_ActivityTitleLabel::before{border-radius: 50%;padding: 10px;font-size: 20px;background: #DDD;border: 1px solid #dadada;}
+.rn_UserActivity .rn_Comment .rn_ActivityTitleLabel:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f075";color: #477DCA;margin-right: 1em;}
+.rn_UserActivity .rn_BestAnswerGivenByUser .rn_ActivityTitleLabel:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f05d";color: #008000;margin-right: 1em;}
+.rn_UserActivity .rn_QuestionRatingGivenByUser .rn_ActivityTitleLabel:before, .rn_UserActivity .rn_QuestionRatingGivenToUser .rn_ActivityTitleLabel:before, .rn_UserActivity .rn_CommentRatingGivenByUser .rn_ActivityTitleLabel:before, .rn_UserActivity .rn_CommentRatingGivenToUser .rn_ActivityTitleLabel:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f087";margin-right: 1em;}
+.rn_UserActivity .rn_Question .rn_ActivityTitleLabel:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f128";padding-left: 0.65em;padding-right: 0.65em;margin-right: 1em;}
+.rn_UserActivity .rn_BestAnswerGivenToUser .rn_ActivityTitleLabel:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f091";color: #008000;margin-right: 1em;}
+.rn_UserActivity .rn_Activities .rn_Activity{border-left: 6px solid #eaeaea;padding: 0 0 1.5em 2.5em;}
+.rn_UserActivity .rn_UserAvatar{}
+.rn_UserActivity .rn_UserAvatar .rn_Large{width: 85px;}
+.rn_UserActivity .rn_Activity .rn_ActivityTitle{*zoom: 1;display: block;font-weight: normal;margin-bottom: 1em;}
+.rn_UserActivity .rn_Activity .rn_ActivityTitle:before, .rn_UserActivity .rn_Activity .rn_ActivityTitle:after{content: " ";display: table;}
+.rn_UserActivity .rn_Activity .rn_ActivityTitle:after{clear: both;}
+.rn_UserActivity .rn_Activity .rn_Time{color: #5e5e5e;float: right;font-size: smaller;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent{*zoom: 1;display: block;clear: both;position: relative;top: -1em;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent:before, .rn_UserActivity .rn_Activity .rn_ActivityContent:after{content: " ";display: table;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent:after{clear: both;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ParentContent{*zoom: 1;display: block;margin-top: 0.5em;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ParentContent:before, .rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ParentContent:after{content: " ";display: table;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ParentContent:after{clear: both;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ParentContent .rn_Info{display: inline;float: none;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ActivityUser{float: left;display: block;margin-right: 2.35765%;width: 14.70196%;margin-left: 0;margin-right: 1em;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ActivityUser:last-child{margin-right: 0;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ActivityUser.rn_ActivityUserSmall{width: 24px;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ActivityUser.rn_ActivityUserMedium{width: 48px;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ActivityUser.rn_ActivityUserLarge{width: 96px;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_ActivityUser.rn_ActivityUserXlarge{width: 160px;}
+.rn_UserActivity .rn_Activity .rn_ActivityContent .rn_Info{margin-right: 0;word-wrap: break-word;}
+.rn_ModerationProfile{margin-top: -2em;}
+.rn_ModerationProfile legend{display: block;}
+.rn_ModerationProfile fieldset{word-break: break-all;}
+.rn_ModerationProfile .rn_FieldLabel{display: block;font-size: 0.8em;font-weight: bold;}
+.rn_ModerationProfile .rn_FieldValue{display: block;padding-left: 1em;font-size: 0.8em;}
+.rn_SimpleSearch{position:relative;}
+.rn_SimpleSearch .rn_SearchField{width:97%;}
+.rn_SimpleSearch .rn_SearchImage{border:none;padding:0;position:absolute;right:0.2em;top:0.46em;*right:0.28em;*top:0.6em;}
+.rn_SimpleSearch span.rn_ButtonLabel{height: 1px;left: -10000px;overflow: hidden;position: absolute;top: auto;width: 1px;}
+.rn_SimpleSearch input{display: block;width: 80%;font-size: 0.85em;}
+.rn_SimpleSearch input::-webkit-search-cancel-button{-webkit-appearance: none;}
+.rn_SimpleSearch button{padding: 0;width: 18%;display: inline-block;font-size: 0.85em;min-height: 2.5em;}
+.rn_SimpleSearch button:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f002";margin: 0;}
+.rn_PrintPageLink{margin-right:10px;}
+.rn_PrintPageLink a img{border:none;vertical-align:middle;}
+.rn_PrintPageLink a:before{margin-right: 6px;content: url('/euf/assets/themes/standard/images/answer_print.png');}
+.rn_PrintPageLink a{font-family: "DepotNew-Rg";font-size: 18px;color: #4e4e4e;font-weight: bold;}
+.rn_PrintPageLink a span{height: 30px;vertical-align: super;}

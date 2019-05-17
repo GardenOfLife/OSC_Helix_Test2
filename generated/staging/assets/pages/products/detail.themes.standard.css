@@ -1,0 +1,104 @@
+.rn_ProductCategoryBreadcrumb{overflow: visible;}
+.rn_ProductCategoryBreadcrumb ol li{list-style-type: none;float: left;}
+.rn_ProductCategoryBreadcrumb ol{*zoom: 1;padding: 0;}
+.rn_ProductCategoryBreadcrumb ol:before, .rn_ProductCategoryBreadcrumb ol:after{content: " ";display: table;}
+.rn_ProductCategoryBreadcrumb ol:after{clear: both;}
+.rn_ProductCategoryBreadcrumb ol li{line-height: 3em;}
+.rn_ProductCategoryBreadcrumb ol li a{cursor: default;}
+.rn_ProductCategoryBreadcrumb ol li a:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f105";margin-left: 10px;font-size: 3em;line-height: 0.75em;vertical-align: -25%;}
+.rn_ProductCategoryBreadcrumb ol li a span{cursor: pointer;}
+.rn_ProductCategoryBreadcrumb ol li:first-child a:before{content: none;}
+.rn_ProductCategoryImageDisplay{*zoom: 1;}
+.rn_ProductCategoryImageDisplay:before, .rn_ProductCategoryImageDisplay:after{content: " ";display: table;}
+.rn_ProductCategoryImageDisplay:after{clear: both;}
+.rn_ProductCategoryImageDisplay img{max-height: 150px;}
+.rn_DiscussionSubscriptionIcon .rn_Loading{display: inline-block;}
+.rn_DiscussionSubscriptionIcon .rn_Loading:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f110";-webkit-animation: fa-spin 2s infinite linear;-moz-animation: fa-spin 2s infinite linear;animation: fa-spin 2s infinite linear;display: block;font-size: 1em;position: relative;text-align: center;}
+.rn_DiscussionSubscriptionIcon .rn_Show{display: inline;}
+.rn_DiscussionSubscriptionIcon .rn_Unsubscribe > a:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f0e0";}
+.rn_DiscussionSubscriptionIcon .rn_Subscribe > a:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f003";}
+.rn_DiscussionSubscriptionIcon .rn_SpillOverText{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display: inline;}
+.rn_DiscussionSubscriptionIcon .rn_SpillOverText:hover{overflow: visible;white-space: normal;word-break: break-all;word-wrap: break-word;}
+.rn_VisualProductCategorySelector{padding: 2em 0;}
+.rn_VisualProductCategorySelector .rn_BreadCrumb{display: block;}
+.rn_VisualProductCategorySelector .rn_ItemGroup{*zoom: 1;}
+.rn_VisualProductCategorySelector .rn_ItemGroup:before, .rn_VisualProductCategorySelector .rn_ItemGroup:after{content: " ";display: table;}
+.rn_VisualProductCategorySelector .rn_ItemGroup:after{clear: both;}
+.rn_VisualProductCategorySelector .rn_Item{float: left;display: block;margin-right: 2.35765%;width: 14.70196%;margin-bottom: 1.5em;position: relative;}
+.rn_VisualProductCategorySelector .rn_Item:last-child{margin-right: 0;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ImageContainer{overflow: hidden;max-height: 150px;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ImageContainer a{border: 1px solid transparent;display: inline-block;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ImageContainer a:focus{border: 1px dotted #3B6DB1;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ImageContainer img{width: 100%;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;background: #DBD199;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer{-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a{-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;display: block;text-align: center;padding: 0;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ItemLink{font-weight: bold;word-wrap: break-word;}
+@media screen and (max-width: 400px){.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ItemLink:last-child{display: block;margin-bottom: 1.5em;}
+}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ItemLink:hover{background-color: #bfbfbf;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ItemLink:active{background-color: #b3b3b3;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ShowChildren{white-space: nowrap;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ShowChildren:after{font-family: 'FontAwesome';margin-left: 6px;content: "\f054";font-size: smaller;}
+@media screen and (max-width: 400px){.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ShowChildren{border: 0;display: block;padding-left: 0;}
+}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ShowChildren:hover{background-color: #cccccc;}
+.rn_VisualProductCategorySelector .rn_Item .rn_ActionContainer a.rn_ShowChildren:active{background-color: #bfbfbf;}
+.rn_VisualProductCategorySelector .rn_Item.rn_LastItem{margin-right: 0;}
+.rn_VisualProductCategorySelector .rn_ItemPagination{font-size: 1.1em;text-align: right;}
+.rn_VisualProductCategorySelector .rn_ItemPagination .rn_Disabled{color: #767676;cursor: default;}
+.rn_VisualProductCategorySelector .rn_ItemPagination .rn_PreviousPage:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f104";}
+.rn_VisualProductCategorySelector .rn_ItemPagination .rn_ForwardPage:after{font-family: 'FontAwesome';margin-left: 6px;content: "\f105";}
+.rn_VisualProductCategorySelector .rn_ItemPagination .rn_CurrentPage{font-weight: bold;}
+.rn_VisualProductCategorySelector .rn_ItemPagination li{margin-right: 4px;padding: 0 0.2em;display: inline-block;}
+.rn_RssIcon a.rn_RssImgLink:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f143";color: #FF9933;}
+.rn_TopAnswers .rn_Excerpt{display:block;}
+rn_TopAnswers .rn_Title{//font-size: 1.111em;font-size: 0 .899em;}
+.rn_TopAnswers li{margin-bottom: 12px;}
+.rn_TopAnswers ul{padding-top: 3px;padding-bottom: 48px;}
+.rn_TopAnswers .rn_Title a{color: #4e4e4e;font-family: "DepotNew-Bd";font-weight: bold;font-size: 26px;line-height: 32px;}
+@media screen and (min-width: 720px){.rn_TopAnswers ul{columns: 2;}
+.rn_TopAnswers li{margin-bottom: 12px;width: 100%;}
+}
+.rn_RecentlyAnsweredQuestions{*zoom: 1;max-width: 68em;margin-left: auto;margin-right: auto;}
+.rn_RecentlyAnsweredQuestions:before, .rn_RecentlyAnsweredQuestions:after{content: " ";display: table;}
+.rn_RecentlyAnsweredQuestions:after{clear: both;}
+.rn_RecentlyAnsweredQuestions .rn_Author{float: left;display: block;margin-right: 2.35765%;width: 6.17215%;}
+.rn_RecentlyAnsweredQuestions .rn_Author:last-child{margin-right: 0;}
+@media screen and (max-width: 720px){.rn_RecentlyAnsweredQuestions .rn_Author{float: left;display: block;margin-right: 2.35765%;width: 14.70196%;}
+.rn_RecentlyAnsweredQuestions .rn_Author:last-child{margin-right: 0;}
+}
+.rn_RecentlyAnsweredQuestions .rn_RecentlyAnsweredQuestionsItem{float: left;display: block;margin-right: 2.35765%;width: 100%;margin-bottom: 1em;}
+.rn_RecentlyAnsweredQuestions .rn_RecentlyAnsweredQuestionsItem:last-child{margin-right: 0;}
+@media screen and (max-width: 400px){.rn_RecentlyAnsweredQuestions .rn_RecentlyAnsweredQuestionsItem{float: left;display: block;margin-right: 2.35765%;width: 100%;}
+.rn_RecentlyAnsweredQuestions .rn_RecentlyAnsweredQuestionsItem:last-child{margin-right: 0;}
+}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo{*zoom: 1;margin-bottom: 1em;}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo:before, .rn_RecentlyAnsweredQuestions .rn_QuestionInfo:after{content: " ";display: table;}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo:after{clear: both;}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo .rn_QuestionSubject{float: left;display: block;margin-right: 2.35765%;width: 91.4702%;}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo .rn_QuestionSubject:last-child{margin-right: 0;}
+@media screen and (max-width: 720px){.rn_RecentlyAnsweredQuestions .rn_QuestionInfo .rn_QuestionSubject{float: left;display: block;margin-right: 2.35765%;width: 82.94039%;}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo .rn_QuestionSubject:last-child{margin-right: 0;}
+}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo .rn_QuestionSubject a{display: inline-block;}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo .rn_AvatarLink{visibility: hidden;}
+.rn_RecentlyAnsweredQuestions .rn_QuestionInfo .rn_AvatarLink:before{font-family: 'FontAwesome';margin-right: 6px;content: "\f059";visibility: visible;font-size: 1.6em;color: #333;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo{margin-left: 8.5298%;float: left;display: block;margin-right: 2.35765%;width: 91.4702%;*zoom: 1;display: block;margin-top: 10px;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo:last-child{margin-right: 0;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo:before, .rn_RecentlyAnsweredQuestions .rn_AnswerInfo:after{content: " ";display: table;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo:after{clear: both;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent{float: left;display: block;margin-right: 2.35765%;width: 91.4702%;border-radius: 6px;padding: 10px;background: #EFEFEF;border: 1px solid #DDD;box-shadow: 0 1px 2px rgba(20, 20, 20, 0.1);color: #222;padding-bottom: 1em;position: relative;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent:last-child{margin-right: 0;}
+@media screen and (max-width: 720px){.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent{float: left;display: block;margin-right: 2.35765%;width: 82.94039%;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent:last-child{margin-right: 0;}
+}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent:before{font-family: 'FontAwesome';margin-right: 6px;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent:before{content: "\f0d9";font-size: 1.5em;position: absolute;left: -8px;top: 10px;color: #EFEFEF;z-index: 1;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent:after{font-family: 'FontAwesome';margin-left: 6px;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent:after{content: "\f0d9";font-size: 1.6em;position: absolute;left: -15px;top: 10px;color: #DDD;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent .rn_AnswerText{word-wrap: break-word;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent .rn_BestAnswerLabel{font-weight: bold;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent .rn_AnswerMoreLink{display: block;text-align: right;color: #2e568b;}
+.rn_RecentlyAnsweredQuestions .rn_AnswerInfo .rn_AnswerContent .rn_AnswerMoreLink:after{font-family: 'FontAwesome';margin-left: 6px;content: "\f054";font-size: smaller;margin-left: 0;}
+.rn_RecentlyAnsweredQuestions .rn_ContentLocked:after{font-family: 'FontAwesome';margin-left: 6px;content: "\f023";}
+.rn_HighContrastMode .rn_RecentlyAnsweredQuestions .rn_AnswerContent:before, .rn_HighContrastMode .rn_RecentlyAnsweredQuestions .rn_AnswerContent:after{content: none;}

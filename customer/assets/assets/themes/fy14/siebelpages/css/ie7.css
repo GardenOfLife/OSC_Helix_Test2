@@ -1,0 +1,5 @@
+th, h3.title, .button { background: #132b3b url(dell_gradient.png) repeat-x; }
+.button { line-height: 24px; height: 24px; vertical-align: bottom;}
+.button2 { vertical-align: baseline; }
+h3.title { margin-bottom: 10px; margin-top: 50px; }
+#loading2 { margin-top: 5px; }
